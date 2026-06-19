@@ -9,6 +9,7 @@ body{
 }
 
 /* Floating Background */
+
 body::before{
     content:"";
     position:fixed;
@@ -32,6 +33,38 @@ body::before{
     100%{transform:translateY(0);}
 }
 
+/* Floating Balloons */
+
+.balloons{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    opacity:.08;
+    font-size:40px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:0;
+    animation:drift 30s linear infinite;
+}
+
+@keyframes drift{
+    0%{
+        transform:translateY(80px);
+    }
+    50%{
+        transform:translateY(-80px);
+    }
+    100%{
+        transform:translateY(80px);
+    }
+}
+
+/* Navigation */
+
 .nav{
     background:rgba(0,0,0,.9);
     padding:15px;
@@ -54,22 +87,37 @@ body::before{
     color:white;
 }
 
+/* Layout */
+
 .container{
     max-width:1000px;
     margin:auto;
     padding:30px 20px;
+    position:relative;
+    z-index:10;
 }
+
+/* Logo */
 
 .logo{
     width:90%;
     max-width:500px;
     animation:floatlogo 5s ease-in-out infinite;
+    filter:
+        drop-shadow(0 0 15px rgba(182,255,0,.20))
+        drop-shadow(0 0 30px rgba(125,255,0,.10));
 }
 
 @keyframes floatlogo{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
 }
+
+/* Tagline */
 
 .tagline{
     color:#b6ff00;
@@ -78,11 +126,35 @@ body::before{
     margin:20px 0;
 }
 
+/* Trust Badges */
+
+.badges{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin:25px 0;
+}
+
+.badges span{
+    background:rgba(182,255,0,.12);
+    border:1px solid rgba(182,255,0,.35);
+    padding:10px 18px;
+    border-radius:999px;
+    color:#b6ff00;
+    font-weight:bold;
+    backdrop-filter:blur(5px);
+    box-shadow:0 0 12px rgba(182,255,0,.15);
+}
+
+/* Sections */
+
 .section{
     background:rgba(255,255,255,0.08);
     margin:30px 0;
     padding:30px;
     border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
     box-shadow:0 10px 30px rgba(0,0,0,.35);
     transition:all .3s ease;
 }
@@ -92,15 +164,25 @@ body::before{
     box-shadow:0 15px 40px rgba(0,0,0,.45);
 }
 
+/* Contact Cards */
+
 .phone{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:20px;
+    max-width:400px;
+    margin:15px auto;
+    box-shadow:0 8px 20px rgba(0,0,0,.30);
     font-size:1.3rem;
-    margin:15px 0;
 }
 
 .phone a{
     color:white;
     text-decoration:none;
 }
+
+/* Buttons */
 
 .btn{
     display:inline-block;
@@ -144,11 +226,45 @@ body::before{
     100%{box-shadow:0 0 10px rgba(182,255,0,.4);}
 }
 
+/* Headings */
+
 h1,h2,h3{
     text-shadow:0 0 15px rgba(182,255,0,.2);
 }
 
+h2{
+    color:#b6ff00;
+    margin-bottom:20px;
+}
+
+/* Footer */
+
 .footer{
-    margin:40px 0;
-    opacity:.8;
+    margin-top:60px;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.10);
+    opacity:.85;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .badges{
+        gap:8px;
+    }
+
+    .badges span{
+        font-size:.85rem;
+        padding:8px 12px;
+    }
+
+    .quote-btn{
+        font-size:1.05rem;
+        padding:18px 24px;
+    }
+
+    .phone{
+        margin:12px auto;
+    }
 }
