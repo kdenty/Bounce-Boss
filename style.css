@@ -95,7 +95,7 @@ body::before{
 /* Layout */
 
 .container{
-    max-width:1100px;
+    max-width:1400px;
     margin:auto;
     padding:30px 20px;
     position:relative;
