@@ -44,8 +44,8 @@ body::before{
 
 .floating-icons span{
     position:absolute;
-    font-size:55px;
-    opacity:.22;
+    font-size:30px;
+    opacity:.12;
     animation:float 12s infinite ease-in-out;
     filter:drop-shadow(0 0 10px rgba(182,255,0,.15));
 }
