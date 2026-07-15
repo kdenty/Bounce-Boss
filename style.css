@@ -1,3 +1,5 @@
+/* Bounce Boss Inflatables - style.css */
+
 *{
     margin:0;
     padding:0;
@@ -5,9 +7,9 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:linear-gradient(135deg,#050816,#0c1228,#12172f);
-    color:#ffffff;
+    color:#fff;
     text-align:center;
     overflow-x:hidden;
 }
@@ -23,15 +25,17 @@ body{
 }
 
 .nav a{
-    color:#ffffff;
+    color:#fff;
     text-decoration:none;
     margin:0 15px;
     font-weight:bold;
     transition:.3s;
 }
 
-.nav a:hover{
+.nav a:hover,
+.nav a.active{
     color:#b6ff00;
+    text-shadow:0 0 12px rgba(182,255,0,.6);
 }
 
 .hero-banner{
@@ -40,9 +44,7 @@ body{
     display:block;
     margin:25px auto;
     border-radius:25px;
-    box-shadow:
-        0 15px 45px rgba(0,0,0,.55),
-        0 0 25px rgba(182,255,0,.20);
+    box-shadow:0 15px 45px rgba(0,0,0,.55),0 0 25px rgba(182,255,0,.2);
 }
 
 .container{
@@ -53,20 +55,18 @@ body{
 
 h1{
     font-size:3rem;
-    margin-bottom:15px;
     color:#b6ff00;
     text-shadow:0 0 15px rgba(182,255,0,.35);
+    margin-bottom:15px;
 }
 
 h2{
     color:#b6ff00;
-    margin-bottom:20px;
     font-size:2rem;
+    margin-bottom:20px;
 }
 
-h3{
-    margin-bottom:15px;
-}
+h3{margin-bottom:15px;}
 
 .hero-description{
     max-width:900px;
@@ -93,27 +93,28 @@ h3{
     font-weight:bold;
 }
 
-.section{
-    max-width:1200px;
-    margin:30px auto;
-    padding:35px;
+.section,.price-card,.delivery-card,.phone,.unit{
     background:rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.08);
     border-radius:25px;
     box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
+.section{
+    max-width:1200px;
+    margin:30px auto;
+    padding:35px;
+}
+
 .phone{
     max-width:450px;
     margin:20px auto;
     padding:25px;
-    border-radius:20px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(182,255,0,.20);
+    border-color:rgba(182,255,0,.2);
 }
 
 .phone a{
-    color:#ffffff;
+    color:#fff;
     text-decoration:none;
     font-size:1.35rem;
     font-weight:bold;
@@ -128,20 +129,13 @@ h3{
     color:#fff;
     font-weight:bold;
     background:linear-gradient(45deg,#1877f2,#5b6cff);
-    box-shadow:0 8px 20px rgba(24,119,242,.35);
     transition:.3s;
+    box-shadow:0 8px 20px rgba(24,119,242,.35);
 }
 
 .btn:hover{
     transform:translateY(-4px);
     box-shadow:0 12px 30px rgba(24,119,242,.55);
-}
-
-.footer{
-    margin-top:50px;
-    padding:40px 20px;
-    border-top:1px solid rgba(255,255,255,.10);
-    color:#d1d5db;
 }
 
 .inventory-logo{
@@ -152,56 +146,17 @@ h3{
 }
 
 .unit{
-    background:rgba(255,255,255,.05);
-    border-radius:20px;
     padding:20px;
     margin:25px auto;
     max-width:900px;
-    border:1px solid rgba(255,255,255,.08);
 }
 
 .unit img{
     width:100%;
     max-width:600px;
     border-radius:20px;
-    margin:15px auto;
     display:block;
-}
-
-.floating-icons{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:-1;
-}
-
-.floating-icons span{
-    position:absolute;
-    font-size:32px;
-    opacity:.08;
-}
-
-.floating-icons span:nth-child(1){left:10%;top:15%;}
-.floating-icons span:nth-child(2){left:75%;top:10%;}
-.floating-icons span:nth-child(3){left:15%;top:60%;}
-.floating-icons span:nth-child(4){left:85%;top:55%;}
-.floating-icons span:nth-child(5){left:45%;top:25%;}
-.floating-icons span:nth-child(6){left:10%;top:80%;}
-.floating-icons span:nth-child(7){left:70%;top:85%;}
-.floating-icons span:nth-child(8){left:55%;top:5%;}
-
-@media(max-width:768px){
-
-    h1{
-        font-size:2rem;
-    }
-/* ===========================
-   PRICING PAGE
-=========================== */
-
-.nav a.active{
-    color:#b6ff00;
-    text-shadow:0 0 12px rgba(182,255,0,.6);
+    margin:15px auto;
 }
 
 .pricing-grid{
@@ -212,27 +167,19 @@ h3{
 }
 
 .price-card{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:25px;
     padding:30px;
     transition:.35s;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
-.price-card:hover{
-    transform:translateY(-8px);
+.price-card:hover,
+.delivery-card:hover{
+    transform:translateY(-6px);
     border-color:#b6ff00;
-    box-shadow:
-        0 20px 40px rgba(0,0,0,.45),
-        0 0 25px rgba(182,255,0,.25);
 }
 
 .featured{
     border:2px solid #b6ff00;
-    box-shadow:
-        0 0 20px rgba(182,255,0,.35),
-        0 15px 40px rgba(0,0,0,.40);
+    box-shadow:0 0 20px rgba(182,255,0,.35),0 15px 40px rgba(0,0,0,.4);
 }
 
 .ribbon{
@@ -241,23 +188,21 @@ h3{
     color:#111;
     padding:8px 18px;
     border-radius:999px;
-    font-size:.9rem;
     font-weight:bold;
     margin-bottom:20px;
 }
 
 .price{
     font-size:3rem;
-    font-weight:bold;
     color:#b6ff00;
+    font-weight:bold;
     margin:20px 0;
-    text-shadow:0 0 18px rgba(182,255,0,.30);
 }
 
 .price-card ul{
     list-style:none;
-    padding:0;
     margin:25px 0;
+    padding:0;
 }
 
 .price-card li{
@@ -268,65 +213,48 @@ h3{
 .delivery-box{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
     gap:25px;
+    justify-content:center;
     margin-top:30px;
 }
 
 .delivery-card{
     flex:1;
     min-width:280px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
     padding:25px;
-    transition:.3s;
 }
 
-.delivery-card:hover{
-    transform:translateY(-5px);
-    border-color:#b6ff00;
+.footer{
+    margin-top:50px;
+    padding:40px 20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#d1d5db;
 }
 
-.delivery-card h3{
-    color:#b6ff00;
-    margin-bottom:10px;
+.floating-icons{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
 }
+.floating-icons span{position:absolute;font-size:32px;opacity:.08;}
+.floating-icons span:nth-child(1){left:10%;top:15%;}
+.floating-icons span:nth-child(2){left:75%;top:10%;}
+.floating-icons span:nth-child(3){left:15%;top:60%;}
+.floating-icons span:nth-child(4){left:85%;top:55%;}
+.floating-icons span:nth-child(5){left:45%;top:25%;}
+.floating-icons span:nth-child(6){left:10%;top:80%;}
+.floating-icons span:nth-child(7){left:70%;top:85%;}
+.floating-icons span:nth-child(8){left:55%;top:5%;}
 
 @media(max-width:768px){
-
-    .pricing-grid{
-        grid-template-columns:1fr;
-    }
-
-    .price{
-        font-size:2.5rem;
-    }
-
-    .delivery-box{
-        flex-direction:column;
-    }
-
-}
-    h2{
-        font-size:1.5rem;
-    }
-
-    .section{
-        margin:20px 12px;
-        padding:25px;
-    }
-
-    .hero-description{
-        font-size:1rem;
-    }
-
-    .btn{
-        width:90%;
-        max-width:350px;
-    }
-
-    .badges span{
-        font-size:.85rem;
-    }
+    h1{font-size:2rem;}
+    h2{font-size:1.5rem;}
+    .section{margin:20px 12px;padding:25px;}
+    .hero-description{font-size:1rem;}
+    .btn{width:90%;max-width:350px;}
+    .badges span{font-size:.85rem;}
+    .pricing-grid{grid-template-columns:1fr;}
+    .price{font-size:2.4rem;}
+    .delivery-box{flex-direction:column;}
 }
