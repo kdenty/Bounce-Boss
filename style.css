@@ -233,6 +233,33 @@ UTILITY CLASSES
     text-align:center;
 
 }
+/*==================================================
+FEATURE LISTS
+==================================================*/
+
+.pricing-features{
+
+margin:20px 0;
+
+text-align:left;
+
+max-width:300px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+
+.pricing-features p{
+
+margin:10px 0;
+
+font-weight:600;
+
+color:var(--text);
+
+}
 
 /*==================================================
  NAVIGATION
