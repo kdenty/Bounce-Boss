@@ -234,30 +234,71 @@ UTILITY CLASSES
 
 }
 /*==================================================
-FEATURE LISTS
+PRICING FEATURE LISTS
 ==================================================*/
 
 .pricing-features{
 
-margin:20px 0;
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+margin:22px auto;
+
+max-width:280px;
 
 text-align:left;
-
-max-width:300px;
-
-margin-left:auto;
-
-margin-right:auto;
 
 }
 
 .pricing-features p{
 
-margin:10px 0;
+margin:0;
+
+font-size:.98rem;
 
 font-weight:600;
 
+line-height:1.6;
+
 color:var(--text);
+
+padding-left:6px;
+
+}
+/*==================================================
+UPGRADE BANNER
+==================================================*/
+
+.upgrade-banner{
+
+margin:24px 0;
+
+padding:14px 18px;
+
+border-radius:18px;
+
+background:
+
+linear-gradient(
+135deg,
+var(--green),
+#D7FF82
+);
+
+color:#111;
+
+font-weight:800;
+
+font-size:1rem;
+
+text-align:center;
+
+box-shadow:
+
+var(--green-glow);
 
 }
 
@@ -816,13 +857,17 @@ transform:scale(1.03);
 
 .inventory-info{
 
-padding:24px;
-
 display:flex;
 
 flex-direction:column;
 
-gap:16px;
+height:100%;
+
+padding:28px;
+
+gap:18px;
+
+justify-content:space-between;
 
 }
 
@@ -919,36 +964,38 @@ box-shadow:
 /*==================================================
  PRICE TAG
 ==================================================*/
-
 .price-tag{
 
 display:inline-block;
 
-margin:10px 0;
+margin:18px 0;
 
-padding:11px 22px;
+padding:14px 28px;
 
 border-radius:999px;
-
-font-weight:900;
-
-font-size:1rem;
-
-color:#111;
 
 background:
 
 linear-gradient(
 135deg,
 var(--green),
-#DFFF88
+#D7FF82
 );
+
+color:#111;
+
+font-size:1.35rem;
+
+font-weight:900;
+
+letter-spacing:.5px;
 
 box-shadow:
 
-0 0 16px rgba(184,255,56,.18);
+var(--green-glow);
 
 }
+
 
 /*==================================================
  BOOKING STEPS
