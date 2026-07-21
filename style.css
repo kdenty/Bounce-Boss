@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BOUNCE BOSS INFLATABLES - COMPLETE WEBSITE STYLESHEET (FIXED)
+   BOUNCE BOSS INFLATABLES - COMPLETE WEBSITE MASTER STYLESHEET
    ========================================================================== */
 
 /* --- Foundational Resets & Typography --- */
@@ -102,21 +102,25 @@ a {
     letter-spacing: 0.5px;
 }
 
-/* --- FIXED: Alberta Safety Compliance Banner --- */
-.safety-mandate-text {
-    background-color: rgba(30, 27, 75, 0.85) !important; /* Semi-transparent dark indigo to match background */
-    border-left: 4px solid #a855f7 !important;           /* Vibrant purple accent borders */
-    border-right: 4px solid #a855f7 !important;          /* Symmetric border framing */
-    color: #ffffff !important;                            /* Crisp white text for readability */
-    padding: 12px 16px !important;
-    margin: 15px auto !important;
-    max-width: 90% !important;                             /* Fits comfortably within mobile boundaries */
-    font-size: 0.85rem !important;                        /* Perfectly scaled down text size for phones */
+/* --- MASTER BANNER OVERRIDE: Dissolves stark white blocks into matching transparent themes --- */
+.safety-sub-badge,
+.safety-mandate-text,
+.hero-content div[style*="background-color: #f8f9fa"],
+.hero-content div[style*="background-color: rgba(248, 249, 250, 0.95)"],
+header div[style*="background-color"] {
+    background-color: rgba(30, 27, 75, 0.85) !important; /* Forces dark transparency over text blocks */
+    border-left: 4px solid #a855f7 !important;           /* Structural neon brand purple indicators */
+    border-right: 4px solid #a855f7 !important;          /* Keeps mobile boundary elements symmetrical */
+    color: #ffffff !important;                            /* Crisp high-contrast white text typography */
+    padding: 14px 18px !important;
+    margin: 20px auto !important;
+    max-width: 92% !important;                             /* Prevents layout from extending past canvas boundaries */
+    font-size: 0.88rem !important;                        /* Mobile responsive font scale configuration */
     font-weight: 600 !important;
     line-height: 1.4 !important;
-    border-radius: 12px !important;                       /* Rounded corners matching your app styling */
-    text-align: center !important;                        /* Centers paragraph nicely above CTA layout buttons */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* Seamless shadow depth separation */
+    border-radius: 12px !important;                       /* Clean rounded corner corners matching buttons */
+    text-align: center !important;                        /* Centers text parameters above application elements */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important; /* Seamless shadow depth separation masking */
 }
 
 /* --- Button Component Framework --- */
@@ -150,7 +154,7 @@ a {
 .btn-secondary:hover { background-color: #64748b; }
 
 .btn-success { 
-    background-color: #22c55e; /* Vibrant safety green availability button */
+    background-color: #22c55e; /* Vibrant safety green availability action button */
     color: #ffffff; 
 }
 .btn-success:hover { background-color: #16a34a; }
@@ -357,7 +361,6 @@ a {
     }
     .hero-content { max-width: 100%; }
     .hero-content h1 { font-size: 2.8rem; }
-    .safety-mandate-text { text-align: center; border-left: 4px solid #a855f7 !important; border-right: 4px solid #a855f7 !important; border-radius: 12px !important; }
     .hero-buttons { justify-content: center; }
 }
 
