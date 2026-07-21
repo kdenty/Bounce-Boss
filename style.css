@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BOUNCE BOSS INFLATABLES - COMPLETE WEBSITE STYLESHEET
+   BOUNCE BOSS INFLATABLES - COMPLETE WEBSITE STYLESHEET (FIXED)
    ========================================================================== */
 
 /* --- Foundational Resets & Typography --- */
@@ -95,25 +95,28 @@ a {
 
 .tagline {
     font-size: 1.4rem;
-    color: #a855f7; /* High-visibility brand lime/purple accents */
+    color: #a855f7; /* High-visibility brand purple accent */
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* --- New Alberta Safety Compliance Banner --- */
+/* --- FIXED: Alberta Safety Compliance Banner --- */
 .safety-mandate-text {
-    background-color: rgba(30, 41, 59, 0.9) !important;
-    border-left: 5px solid #a855f7 !important; /* Bold purple safety track stripe */
-    color: #f1f5f9 !important;
-    padding: 14px 18px !important;
-    margin: 25px 0 !important;
-    font-size: 0.98rem !important;
+    background-color: rgba(30, 27, 75, 0.85) !important; /* Semi-transparent dark indigo to match background */
+    border-left: 4px solid #a855f7 !important;           /* Vibrant purple accent borders */
+    border-right: 4px solid #a855f7 !important;          /* Symmetric border framing */
+    color: #ffffff !important;                            /* Crisp white text for readability */
+    padding: 12px 16px !important;
+    margin: 15px auto !important;
+    max-width: 90% !important;                             /* Fits comfortably within mobile boundaries */
+    font-size: 0.85rem !important;                        /* Perfectly scaled down text size for phones */
     font-weight: 600 !important;
-    line-height: 1.5 !important;
-    border-radius: 0 10px 10px 0 !important;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3) !important;
+    line-height: 1.4 !important;
+    border-radius: 12px !important;                       /* Rounded corners matching your app styling */
+    text-align: center !important;                        /* Centers paragraph nicely above CTA layout buttons */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* Seamless shadow depth separation */
 }
 
 /* --- Button Component Framework --- */
@@ -147,7 +150,7 @@ a {
 .btn-secondary:hover { background-color: #64748b; }
 
 .btn-success { 
-    background-color: #22c55e; /* Vibrant safety green checkout button */
+    background-color: #22c55e; /* Vibrant safety green availability button */
     color: #ffffff; 
 }
 .btn-success:hover { background-color: #16a34a; }
@@ -324,6 +327,8 @@ a {
 
 .footer {
     background-color: #090d16;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .footer-title {
@@ -352,7 +357,7 @@ a {
     }
     .hero-content { max-width: 100%; }
     .hero-content h1 { font-size: 2.8rem; }
-    .safety-mandate-text { text-align: center; border-left: none; border-top: 5px solid #a855f7; border-radius: 8px; }
+    .safety-mandate-text { text-align: center; border-left: 4px solid #a855f7 !important; border-right: 4px solid #a855f7 !important; border-radius: 12px !important; }
     .hero-buttons { justify-content: center; }
 }
 
