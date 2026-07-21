@@ -1,6 +1,6 @@
 /*==================================================
- Bounce Boss Website v4.0
- Aurora Edition
+ Bounce Boss Website v5.0
+ Performance Edition
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,6 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
       SCROLL REVEAL
     ==============================================*/
 
+    const revealItems = document.querySelectorAll(
+        ".container, .section, .cta"
+    );
+
     const observer = new IntersectionObserver((entries) => {
 
         entries.forEach((entry) => {
@@ -37,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
 
                 entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
 
             }
 
@@ -44,19 +49,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, {
 
-        threshold: 0.15
+        threshold:0.12,
+        rootMargin:"0px 0px -40px 0px"
 
     });
 
-    document
-        .querySelectorAll(".container, .section, .cta")
-        .forEach((element) => {
+    revealItems.forEach((item) => {
 
-            element.classList.add("reveal");
+        item.classList.add("reveal");
+        observer.observe(item);
 
-            observer.observe(element);
+    });
+
+    /*==============================================
+      BUTTON PRESS EFFECT
+    ==============================================*/
+
+    document.querySelectorAll(".btn, .book-now").forEach((button) => {
+
+        button.addEventListener("pointerdown", () => {
+
+            button.style.transform = "scale(.97)";
 
         });
+
+        button.addEventListener("pointerup", () => {
+
+            button.style.transform = "";
+
+        });
+
+        button.addEventListener("pointerleave", () => {
+
+            button.style.transform = "";
+
+        });
+
+    });
 
     /*==============================================
       BACK TO TOP BUTTON
@@ -68,8 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         backTop.style.opacity = "0";
         backTop.style.pointerEvents = "none";
+        backTop.style.transform = "translateY(15px)";
 
-        window.addEventListener("scroll", () => {
+        let ticking = false;
+
+        const updateScroll = () => {
 
             if (window.scrollY > 300) {
 
@@ -85,47 +117,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
+            ticking = false;
+
+        };
+
+        window.addEventListener("scroll", () => {
+
+            if (!ticking) {
+
+                window.requestAnimationFrame(updateScroll);
+                ticking = true;
+
+            }
+
         });
 
     }
-
-    /*==============================================
-      BUTTON CLICK EFFECT
-    ==============================================*/
-
-    document.querySelectorAll(".btn, .book-now").forEach((button) => {
-
-        button.addEventListener("mousedown", () => {
-
-            button.style.transform = "scale(.97)";
-
-        });
-
-        button.addEventListener("mouseup", () => {
-
-            button.style.transform = "";
-
-        });
-
-        button.addEventListener("mouseleave", () => {
-
-            button.style.transform = "";
-
-        });
-
-    });
-
-    /*==============================================
-      PARALLAX AURORA
-    ==============================================*/
-
-    window.addEventListener("scroll", () => {
-
-        const scroll = window.scrollY;
-
-        document.body.style.backgroundPosition =
-            `center ${scroll * 0.08}px`;
-
-    });
 
 });
