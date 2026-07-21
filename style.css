@@ -1,380 +1,288 @@
-/* ==========================================================================
-   BOUNCE BOSS INFLATABLES - COMPLETE WEBSITE MASTER STYLESHEET
-   ========================================================================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bounce Boss Inflatables | Bounce House Rentals in Fort Saskatchewan</title>
 
-/* --- Foundational Resets & Typography --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+<meta name="description" content="Bounce Boss Inflatables provides clean, safe and exciting bounce house rentals throughout Fort Saskatchewan, Sherwood Park, Edmonton, St. Albert and surrounding Alberta communities.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon1.png">
+<link rel="apple-touch-icon" href="/favicon1.png">
+<link rel="canonical" href="https://bounceboss.ca/">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "PartySupplyRental",
+"@id": "https://bounceboss.ca/#business",
+"name": "Bounce Boss Inflatables",
+"alternateName": "Bounce Boss",
+"url": "https://bounceboss.ca/",
+"logo": "https://bounceboss.ca/favicon1.png",
+"image": "https://bounceboss.ca/hero-image.png",
+"telephone": [
+"+1-780-819-0307",
+"+1-587-335-6698"
+ ],
+"priceRange": "$$",
+"description": "Bounce Boss Inflatables is a family-owned inflatable rental company providing clean, commercial-grade bounce houses, inflatable castles, obstacle courses and party rentals throughout Fort Saskatchewan and Northeast Alberta.",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Fort Saskatchewan",
+"addressRegion": "AB",
+"postalCode": "T8L",
+"addressCountry": "CA"
+},
+"areaServed": [
+{
+"@type": "City",
+"name": "Fort Saskatchewan"
+},
+{
+"@type": "City",
+"name": "Sherwood Park"
+},
+{
+"@type": "City",
+"name": "Edmonton"
+},
+{
+"@type": "City",
+"name": "St. Albert"
+},
+{
+"@type": "City",
+"name": "Beaumont"
+},
+{
+"@type": "City",
+"name": "Lamont"
+},
+{
+"@type": "City",
+"name": "Bruderheim"
+},
+{
+"@type": "City",
+"name": "Gibbons"
+},
+{
+"@type": "City",
+"name": "Ardrossan"
 }
-
-body {
-    background-color: #0f172a; /* Rich, sleek midnight slate dark background */
-    color: #f8fafc;           /* High-contrast crisp white text */
-    line-height: 1.6;
-    overflow-x: hidden;
+ ],
+"sameAs": [
+"https://www.facebook.com/share/18iSuAdAUv/"
+ ]
 }
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+</script>
+ <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Bounce Boss Inflatables",
+"alternateName": "Bounce Boss",
+"url": "https://bounceboss.ca/",
+"logo": "https://bounceboss.ca/favicon1.png"
 }
+</script>
+ </head>
 
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+<body>
 
-/* --- Navigation Framework --- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background-color: #1e1b4b; /* Deep twilight indigo core banner background */
-    border-bottom: 3px solid #6b21a8; /* Neon purple bottom accent boundary */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
+<div class="floating-icons">
+<span>🎈</span>
+<span>⭐</span>
+<span>🎉</span>
+<span>🎈</span>
+<span>⭐</span>
+<span>🎊</span>
+<span>🎈</span>
+<span>⭐</span>
+</div>
 
-.logo img {
-    height: 55px;
-    width: auto;
-}
+<div class="nav">
+<a href="index.html" class="active">Home</a>
+<a href="inventory.html">Inventory</a>
+<a href="pricing.html">Pricing</a>
+<a href="calendar.html">Availability</a>
+<a href="about.html">About Us</a>
+<a href="#contact">Contact</a>
+</div>
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
+<section id="home">
 
-.nav-links a {
-    color: #cbd5e1;
-    font-weight: 600;
-    font-size: 1.05rem;
-    padding: 8px 12px;
-    border-radius: 6px;
-}
+<a href="https://www.facebook.com/share/1DCGtKxKX7/" target="_blank">
+<img src="hero-image.png" alt="Bounce Boss Inflatables" class="hero-banner">
+</a>
 
-.nav-links a:hover, 
-.nav-links a.active {
-    color: #ffffff;
-    background-color: #6b21a8; /* Neon brand purple hover state tint */
-    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
-}
+<div class="container">
 
-/* --- Hero Showcase Module --- */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 8%;
-    background-color: #0b0f19;
-    position: relative;
-    gap: 40px;
-}
+<h1>Bounce Boss Inflatables</h1>
 
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-}
+<h3>Big Bounces. Big Fun. Boss of the Party.</h3>
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    color: #ffffff;
-    line-height: 1.1;
-    font-weight: 900;
-    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6); /* Purple logo glow */
-    margin-bottom: 10px;
-}
+<div class="badges">
+<span>🎉 Birthday Parties</span>
+<span>🏫 School Events</span>
+<span>🏘️ Community Events</span>
+<span>🎪 Corporate Events</span>
+</div>
 
-.tagline {
-    font-size: 1.4rem;
-    color: #a855f7; /* High-visibility brand purple accent */
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+<p class="hero-description">
+Make your next event unforgettable with clean, safe and exciting inflatable rentals.
+Bounce Boss proudly serves Fort Saskatchewan, Sherwood Park, Edmonton,
+St. Albert and surrounding communities with reliable service,
+professional setup and family-friendly fun.
+</p>
 
-/* --- Responsive Alberta Safety Compliance Inline Target Override --- */
-.safety-sub-badge {
-    background-color: rgba(30, 27, 75, 0.85) !important;
-    border-left: 4px solid #a855f7 !important;
-    border-right: 4px solid #a855f7 !important;
-    color: #ffffff !important;
-    padding: 12px 16px !important;
-    margin: 15px auto !important;
-    max-width: 92% !important;
-    font-size: 0.88rem !important;
-    font-weight: 600 !important;
-    line-height: 1.4 !important;
-    border-radius: 12px !important;
-    text-align: center !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
-}
+<a class="btn" href="inventory.html">
+🎈 View Our Inflatables
+</a>
 
-/* --- Button Component Framework --- */
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 25px;
-}
+<br><br>
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    font-weight: 700;
-    font-size: 1.05rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+<a class="btn" href="pricing.html">
+💲 View Pricing
+</a>
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-}
+<br><br>
 
-.btn-primary { background-color: #6b21a8; color: #ffffff; }
-.btn-primary:hover { background-color: #7e22ce; }
+<a class="btn" href="calendar.html">
+📅 Check Availability
+</a>
 
-.btn-secondary { background-color: #475569; color: #ffffff; }
-.btn-secondary:hover { background-color: #64748b; }
+<br><br>
 
-.btn-success { 
-    background-color: #22c55e; /* Vibrant safety green availability action button */
-    color: #ffffff; 
-}
-.btn-success:hover { background-color: #16a34a; }
+<a class="btn"
+href="https://www.facebook.com/share/1DCGtKxKX7/"
+target="_blank">
+📘 Visit Bounce Boss on Facebook
+</a>
 
-.hero-image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
+<br><br>
 
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-}
+<a class="btn"
+href="https://g.page/r/CV2cvhtrDEZMEBM/review"
+target="_blank">
+⭐ Leave Us a Google Review
+</a>
 
-/* --- Main Site Content Layout --- */
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 4%;
-}
+</div>
 
-.main-content h2 {
-    font-size: 2.2rem;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
+</section>
 
-/* --- Grid & Card Framework --- */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
-}
+<section class="section">
 
-.feature-card {
-    background-color: #1e293b; /* Distinct dark block cards */
-    border: 1px solid #334155;
-    border-radius: 14px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+<h2>Why Families Choose Bounce Boss</h2>
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    border-color: #4b5563;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
+<div class="badges">
+<span>🎈 Premium Inflatables</span>
+<span>🧼 Clean & Sanitized</span>
+<span>🚚 Delivery Available</span>
+<span>⭐ Fast Response Time</span>
+<span>🏆 Family Owned</span>
+<span>🔧 Setup & Takedown Included</span>
+</div>
 
-.feature-card i {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
+<p>
+Every rental is thoroughly cleaned, inspected and professionally set up
+before your event. We take care of delivery, setup and takedown so you
+can focus on making memories with family and friends.
+</p>
+</section>
 
-.feature-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 12px;
-}
+<section class="section">
+<h2>Serving Northeast Alberta</h2>
+<p>
+Bounce Boss proudly serves Fort Saskatchewan, Sherwood Park, Edmonton,
+St. Albert, Beaumont, Ardrossan, Gibbons, Bruderheim,
+Lamont and surrounding Alberta communities.
+</p>
+</section>
 
-.feature-card p {
-    color: #94a3b8;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
+<section class="section">
+<h2>Perfect For Every Occasion</h2>
+<div class="badges">
+<span>🎂 Birthday Parties</span>
+<span>⚽ Team Wind-Ups</span>
+<span>🏫 School Fun Days</span>
+<span>🎪 Festivals</span>
+<span>🎉 Family Gatherings</span>
+<span>💼 Corporate Events</span>
+</div>
+<p>
+Whether you're planning a backyard birthday party,
+community celebration, sports wind-up, school event
+or company gathering, Bounce Boss helps bring the fun.
+</p>
+</section>
+<section class="section">
 
-/* --- Specific Text Block Content Layouts --- */
-.service-areas, 
-.occasions, 
-.booking-steps {
-    margin-top: 80px;
-    text-align: center;
-}
+<h2>🧁 Need Sweet Treats Too?</h2>
 
-.service-areas p {
-    font-size: 1.15rem;
-    color: #e2e8f0;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
+<p class="hero-description">
+Planning a party? Don't forget dessert! Check out our favourite local bakery,
+<strong>Hey There Cupcake</strong>, for beautiful cupcakes, custom treats,
+and delicious desserts to make your celebration even sweeter.
+</p>
 
-.occasions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
+<a class="btn"
+href="https://www.facebook.com/share/18isudADaU/"
+target="_blank">
+🧁 Visit Hey There Cupcake
+</a>
 
-.occasion-item {
-    background-color: #1a1e2e;
-    padding: 18px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 1.05rem;
-    border-bottom: 3px solid #6b21a8;
-}
+</section>
+<section class="section">
+<h2>Simple Booking Process</h2>
+<div class="badges">
+<span>1️⃣ Choose Your Inflatable</span>
+<span>2️⃣ Check Availability</span>
+<span>3️⃣ Contact Us</span>
+<span>4️⃣ Enjoy Your Event</span>
+</div>
+<p>
+Browse our inventory, check available dates and contact us
+to reserve your rental.
+</p>
+</section>
 
-/* --- Local Bakery Partnership Box --- */
-.bakery-partnership {
-    margin-top: 80px;
-}
+<section id="contact" class="section">
+<h2>Contact Bounce Boss</h2>
 
-.btn-bakery {
-    background-color: #ff69b4;
-    color: #ffffff;
-    border-radius: 30px;
-    padding: 14px 35px;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
-}
+<div class="phone">
+📞 Bookings & Inquiries<br><br>
+<a href="tel:7808190307">780-819-0307</a>
+</div>
 
-.btn-bakery:hover {
-    background-color: #ff4fa8;
-}
+<div class="phone">
+📞 Alternate Contact<br><br>
+<a href="tel:5873356698">587-335-6698</a>
+</div>
 
-/* --- Sequential Steps Layout --- */
-.steps-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
+<p>
+Family Owned & Operated By<br>
+<strong>Jordynne & Kris Denty</strong>
+</p>
 
-.step {
-    flex: 1;
-    min-width: 255px;
-    max-width: 340px;
-    background-color: #111827;
-    padding: 30px 20px;
-    border-radius: 12px;
-    position: relative;
-    border-top: 4px solid #16a34a;
-}
+<a class="btn" href="https://www.facebook.com/share/1DCGtKxKX7/" target="_blank">💬 Message Us On Facebook</a>
 
-.step-number {
-    width: 40px;
-    height: 40px;
-    background-color: #16a34a;
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 1.2rem;
-    margin: -50px auto 15px auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
+<br><br>
 
-.step h3 { margin-bottom: 10px; font-size: 1.25rem; }
-.step p { color: #94a3b8; font-size: 0.95rem; }
+<a class="btn" href="https://g.page/r/CV2cvhtrDEZMEBM/review" target="_blank">⭐ Review Bounce Boss On Google</a>
 
-/* --- Contact & Location Footprint Footer --- */
-.contact-section {
-    margin-top: 80px;
-    background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
-    padding: 40px 20px;
-    border-radius: 16px;
-    border: 1px solid #312e81;
-}
+</section>
 
-.owner-names {
-    font-size: 1.6rem;
-    color: #a855f7;
-    font-weight: 800;
-    margin: 5px 0 20px 0;
-}
+<div class="footer">
+<strong>Bounce Boss Inflatables</strong><br><br>
+Fort Saskatchewan, Alberta<br><br>
+Clean • Safe • Reliable Inflatable Rentals<br><br>
+Serving Fort Saskatchewan, Sherwood Park,
+Edmonton, St. Albert & Surrounding Areas
+</div>
 
-.footer {
-    background-color: #090d16;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.footer-title {
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 1.15rem;
-}
-
-/* --- Alberta Safety Footer Tracking Rules --- */
-.footer-compliance {
-    font-size: 0.88rem !important;
-    color: #64748b !important;
-    max-width: 750px !important;
-    margin: 12px auto 0 auto !important;
-    font-style: italic !important;
-    line-height: 1.6 !important;
-    display: block !important;
-}
-
-/* --- Mobile Breakpoints & Fluid Scaling Overrides --- */
-@media (max-width: 960px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 5%;
-    }
-    .hero-content { max-width: 100%; }
-    .hero-content h1 { font-size: 2.8rem; }
-    .hero-buttons { justify-content: center; }
-}
-
-@media (max-width: 640px) {
-    .navbar { 
-        flex-direction: column !important; 
-        gap: 12px !important; 
-        padding: 10px 5px !important; 
-    }
-    .nav-links { 
-        gap: 12px !important; 
-        font-size: 0.88rem !important; 
-        width: 100% !important; 
-        justify-content: center !important; 
-        padding: 0 !important; 
-    }
-    .hero-content h1 { font-size: 2.2rem; }
-    .tagline { font-size: 1.1rem; }
-    .btn { width: 100%; justify-content: center; padding: 12px 20px; }
-    .footer-compliance { font-size: 0.82rem !important; padding: 0 10px; }
-}
+</body>
+</html>
