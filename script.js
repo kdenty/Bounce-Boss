@@ -1,28 +1,53 @@
 /*==================================================
- Bounce Boss Website v5.0
- Performance Edition
+ Bounce Boss Website v6.4
+ Galaxy Edition
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
     /*==============================================
-      CENTER ACTIVE NAVIGATION
+      SMART MOBILE NAVIGATION
     ==============================================*/
 
     const nav = document.querySelector(".nav");
+    const links = document.querySelectorAll(".nav a");
     const active = document.querySelector(".nav .active");
 
     if (nav && active) {
 
-        const scrollPosition =
-            active.offsetLeft -
-            (nav.offsetWidth / 2) +
-            (active.offsetWidth / 2);
+        // Only auto-scroll if the nav actually overflows
+        const navNeedsScrolling = nav.scrollWidth > nav.clientWidth;
 
-        nav.scrollTo({
-            left: scrollPosition,
-            behavior: "smooth"
-        });
+        if (navNeedsScrolling) {
+
+            const index = Array.from(links).indexOf(active);
+
+            // Home, Inflatables & Pricing stay left
+            if (index <= 2) {
+
+                nav.scrollTo({
+
+                    left: 0,
+                    behavior: "auto"
+
+                });
+
+            }
+
+            // Book Now, About & Contact center themselves
+            else {
+
+                active.scrollIntoView({
+
+                    behavior: "auto",
+                    inline: "center",
+                    block: "nearest"
+
+                });
+
+            }
+
+        }
 
     }
 
@@ -49,8 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, {
 
-        threshold:0.12,
-        rootMargin:"0px 0px -40px 0px"
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
 
     });
 
@@ -73,17 +98,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-        button.addEventListener("pointerup", () => {
+        const resetButton = () => {
 
             button.style.transform = "";
 
-        });
+        };
 
-        button.addEventListener("pointerleave", () => {
-
-            button.style.transform = "";
-
-        });
+        button.addEventListener("pointerup", resetButton);
+        button.addEventListener("pointerleave", resetButton);
+        button.addEventListener("pointercancel", resetButton);
 
     });
 
@@ -120,6 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
             ticking = false;
 
         };
+
+        updateScroll();
 
         window.addEventListener("scroll", () => {
 
