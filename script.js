@@ -1,69 +1,98 @@
 /*==================================================
- Bounce Boss Website v6.4
+ Bounce Boss Website v7.1
  Galaxy Edition
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    
-/*==============================================
-  SMART MOBILE NAVIGATION
-==============================================*/
+    /*==============================================
+      SMART MOBILE NAVIGATION
+    ==============================================*/
 
-const nav = document.querySelector(".nav");
-const active = document.querySelector(".nav .active");
+    const nav = document.querySelector(".nav");
+    const links = [...document.querySelectorAll(".nav a")];
+    const active = document.querySelector(".nav .active");
 
-if (nav && active) {
+    if (nav && active) {
 
-    const navRect = nav.getBoundingClientRect();
-    const activeRect = active.getBoundingClientRect();
+        const index = links.indexOf(active);
 
-    const fullyVisible =
-        activeRect.left >= navRect.left &&
-        activeRect.right <= navRect.right;
+        // Home always starts at the far left
+        if (index === 0) {
 
-    // If the active page is already visible,
-    // don't move the navigation at all.
-    if (!fullyVisible) {
+            nav.scrollTo({
+                left: 0,
+                behavior: "smooth"
+            });
 
-        active.scrollIntoView({
+        }
 
-            behavior: "auto",
-            inline: "center",
-            block: "nearest"
+        else {
 
-        });
+            let target =
+                active.offsetLeft -
+                nav.clientWidth / 3;
+
+            // Leave about 30% of the NEXT button visible
+            const next = links[index + 1];
+
+            if (next) {
+
+                target =
+                    next.offsetLeft +
+                    (next.offsetWidth * .30) -
+                    nav.clientWidth;
+
+            }
+
+            const maxScroll =
+                nav.scrollWidth - nav.clientWidth;
+
+            target = Math.max(
+                0,
+                Math.min(target, maxScroll)
+            );
+
+            nav.scrollTo({
+
+                left: target,
+                behavior: "smooth"
+
+            });
+
+        }
 
     }
 
-}
     /*==============================================
       SCROLL REVEAL
     ==============================================*/
 
-    const revealItems = document.querySelectorAll(
-        ".container, .section, .cta"
-    );
+    const revealItems =
+        document.querySelectorAll(
+            ".container, .section, .cta"
+        );
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer =
+        new IntersectionObserver((entries) => {
 
-        entries.forEach((entry) => {
+            entries.forEach((entry) => {
 
-            if (entry.isIntersecting) {
+                if (entry.isIntersecting) {
 
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
 
-            }
+                }
+
+            });
+
+        }, {
+
+            threshold: .12,
+            rootMargin: "0px 0px -40px 0px"
 
         });
-
-    }, {
-
-        threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
-
-    });
 
     revealItems.forEach((item) => {
 
@@ -76,70 +105,69 @@ if (nav && active) {
       BUTTON PRESS EFFECT
     ==============================================*/
 
-    document.querySelectorAll(".btn, .book-now").forEach((button) => {
+    document
+        .querySelectorAll(".btn, .book-now")
+        .forEach((button) => {
 
-        button.addEventListener("pointerdown", () => {
+            const reset = () =>
+                button.style.transform = "";
 
-            button.style.transform = "scale(.97)";
+            button.addEventListener(
+                "pointerdown",
+                () => button.style.transform = "scale(.97)"
+            );
+
+            button.addEventListener(
+                "pointerup",
+                reset
+            );
+
+            button.addEventListener(
+                "pointerleave",
+                reset
+            );
+
+            button.addEventListener(
+                "pointercancel",
+                reset
+            );
 
         });
-
-        const resetButton = () => {
-
-            button.style.transform = "";
-
-        };
-
-        button.addEventListener("pointerup", resetButton);
-        button.addEventListener("pointerleave", resetButton);
-        button.addEventListener("pointercancel", resetButton);
-
-    });
 
     /*==============================================
       BACK TO TOP BUTTON
     ==============================================*/
 
-    const backTop = document.querySelector(".back-top");
+    const backTop =
+        document.querySelector(".back-top");
 
     if (backTop) {
 
-        backTop.style.opacity = "0";
-        backTop.style.pointerEvents = "none";
-        backTop.style.transform = "translateY(15px)";
-
-        let ticking = false;
-
-        const updateScroll = () => {
+        const update = () => {
 
             if (window.scrollY > 300) {
 
                 backTop.style.opacity = "1";
                 backTop.style.pointerEvents = "auto";
-                backTop.style.transform = "translateY(0)";
+                backTop.style.transform =
+                    "translateY(0)";
 
             } else {
 
                 backTop.style.opacity = "0";
                 backTop.style.pointerEvents = "none";
-                backTop.style.transform = "translateY(15px)";
+                backTop.style.transform =
+                    "translateY(15px)";
 
             }
-
-            ticking = false;
 
         };
 
-        updateScroll();
+        update();
 
         window.addEventListener("scroll", () => {
 
-            if (!ticking) {
-
-                window.requestAnimationFrame(updateScroll);
-                ticking = true;
-
-            }
+            requestAnimationFrame(update);
 
         });
 
