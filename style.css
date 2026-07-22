@@ -258,6 +258,7 @@ text-shadow:none;
 font-weight:800;
 
 }
+
 /*==================================================
  NAVIGATION
 ==================================================*/
@@ -272,17 +273,23 @@ z-index:9999;
 
 display:flex;
 
-justify-content:center;
+justify-content:flex-start;
+
+align-items:center;
 
 gap:14px;
 
-padding:18px 24px;
+padding:18px 20px;
 
 overflow-x:auto;
+
+overflow-y:hidden;
 
 white-space:nowrap;
 
 scrollbar-width:none;
+
+scroll-behavior:smooth;
 
 background:rgba(4,6,15,.18);
 
@@ -298,17 +305,37 @@ display:none;
 
 }
 
+.nav::after{
+
+content:"";
+
+flex:0 0 20px;
+
+}
+
 .nav a{
+
+flex-shrink:0;
 
 color:white;
 
-padding:13px 24px;
+padding:11px 18px;
 
 border-radius:999px;
 
 font-weight:700;
 
-transition:.3s;
+font-size:.95rem;
+
+transition:
+
+color .3s,
+
+background .3s,
+
+transform .3s,
+
+box-shadow .3s;
 
 }
 
@@ -319,6 +346,8 @@ color:var(--green);
 text-shadow:
 
 0 0 14px rgba(184,255,56,.8);
+
+transform:translateY(-2px);
 
 }
 
@@ -341,7 +370,6 @@ box-shadow:
 0 0 30px rgba(141,77,255,.45);
 
 }
-
 /*==================================================
  HERO IMAGE
 ==================================================*/
