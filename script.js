@@ -5,52 +5,38 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /*==============================================
-      SMART MOBILE NAVIGATION
-    ==============================================*/
+    
+/*==============================================
+  SMART MOBILE NAVIGATION
+==============================================*/
 
-    const nav = document.querySelector(".nav");
-    const links = document.querySelectorAll(".nav a");
-    const active = document.querySelector(".nav .active");
+const nav = document.querySelector(".nav");
+const active = document.querySelector(".nav .active");
 
-    if (nav && active) {
+if (nav && active) {
 
-        // Only auto-scroll if the nav actually overflows
-        const navNeedsScrolling = nav.scrollWidth > nav.clientWidth;
+    const navRect = nav.getBoundingClientRect();
+    const activeRect = active.getBoundingClientRect();
 
-        if (navNeedsScrolling) {
+    const fullyVisible =
+        activeRect.left >= navRect.left &&
+        activeRect.right <= navRect.right;
 
-            const index = Array.from(links).indexOf(active);
+    // If the active page is already visible,
+    // don't move the navigation at all.
+    if (!fullyVisible) {
 
-            // Home, Inflatables & Pricing stay left
-            if (index <= 2) {
+        active.scrollIntoView({
 
-                nav.scrollTo({
+            behavior: "auto",
+            inline: "center",
+            block: "nearest"
 
-                    left: 0,
-                    behavior: "auto"
-
-                });
-
-            }
-
-            // Book Now, About & Contact center themselves
-            else {
-
-                active.scrollIntoView({
-
-                    behavior: "auto",
-                    inline: "center",
-                    block: "nearest"
-
-                });
-
-            }
-
-        }
+        });
 
     }
 
+}
     /*==============================================
       SCROLL REVEAL
     ==============================================*/
