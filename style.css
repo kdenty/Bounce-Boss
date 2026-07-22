@@ -1502,6 +1502,14 @@ transition:none!important;
 }
 
 }
+/* --- Dark Mode Filter for Embedded Google Calendar --- */
+iframe[src*="://google.com"] {
+    filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(110%);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
 
 /*==================================================
  Bounce Boss Website v9.0
