@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 target =
                     next.offsetLeft +
-                    (next.offsetWidth * .30) -
+                    (next.offsetWidth * .99) -
                     nav.clientWidth;
 
             }
