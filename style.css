@@ -67,7 +67,7 @@ body::before{
 
     content:"";
 
-    position: absolute; 
+    position: fixed; 
 
     inset:-45%;
 
@@ -192,7 +192,7 @@ body::after{
 
     animation:
 
-        ribbonMove 120s linear infinite;
+        none;
 
 }
 
@@ -202,7 +202,7 @@ STAR LAYER
 
 .space-dust{
 
-    position: absolute;
+    position: fixed;
 
     inset:0;
 
@@ -232,7 +232,7 @@ AURORA
 
 .aurora{
 
-    position: absolute;
+    position: fixed;
 
     inset:-25%;
 
@@ -252,7 +252,7 @@ AURORA
 
     content:"";
 
-    position:absolute;
+    position: fixed;
 
     inset:0;
 
@@ -474,7 +474,7 @@ EXTRA STAR TWINKLE
 
     content:"";
 
-    position:absolute;
+    position: fixed;
 
     inset:0;
 
@@ -505,7 +505,7 @@ EXTRA STAR TWINKLE
 
     content:"";
 
-    position:absolute;
+    position: fixed;
 
     inset:0;
 
