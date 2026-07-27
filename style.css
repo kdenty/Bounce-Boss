@@ -495,7 +495,7 @@ EXTRA STAR TWINKLE
 
     animation:
 
-        twinkle 6s ease-in-out infinite alternate;
+        none;
 
     opacity:.75;
 
