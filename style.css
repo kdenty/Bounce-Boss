@@ -199,7 +199,7 @@ scale(1.16);
 
 }
 /*==================================================
- STARFIELD
+ GALAXY STARFIELD v10
 ==================================================*/
 
 body::after{
@@ -214,31 +214,153 @@ pointer-events:none;
 
 background:
 
-radial-gradient(circle,rgba(255,255,255,.95) 1px,transparent 1.4px),
-
-radial-gradient(circle,rgba(255,255,255,.55) .8px,transparent 1.2px),
-
-radial-gradient(circle,rgba(141,77,255,.55) 1px,transparent 1.5px),
-
-radial-gradient(circle,rgba(79,174,255,.50) 1px,transparent 1.5px),
-
-radial-gradient(circle,rgba(184,255,56,.30) .8px,transparent 1.2px);
+radial-gradient(circle at 15% 20%,rgba(255,255,255,.95) 1px,transparent 1.6px),
+radial-gradient(circle at 75% 30%,rgba(255,255,255,.75) 1px,transparent 1.5px),
+radial-gradient(circle at 35% 80%,rgba(255,255,255,.85) .9px,transparent 1.4px),
+radial-gradient(circle at 90% 65%,rgba(141,77,255,.55) 1.2px,transparent 2px),
+radial-gradient(circle at 55% 12%,rgba(79,174,255,.45) 1px,transparent 2px),
+radial-gradient(circle at 18% 72%,rgba(184,255,56,.35) .9px,transparent 2px),
+radial-gradient(circle at 62% 48%,rgba(255,255,255,.60) .8px,transparent 1.5px),
+radial-gradient(circle at 8% 90%,rgba(255,255,255,.90) 1px,transparent 2px);
 
 background-size:
 
-140px 140px,
-240px 240px,
-320px 320px,
-430px 430px,
-540px 540px;
+220px 220px,
+340px 340px,
+420px 420px,
+520px 520px,
+620px 620px,
+760px 760px,
+900px 900px,
+1100px 1100px;
 
-opacity:.9;
+opacity:.95;
 
 animation:
 
-twinkle 7s ease-in-out infinite alternate;
+starDrift 180s linear infinite,
+twinkle 8s ease-in-out infinite alternate;
+
+z-index:-3;
+
+}
+
+/* Floating space dust */
+
+body .space-dust{
+
+position:fixed;
+
+inset:-20%;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(rgba(255,255,255,.05) 1px,transparent 2px);
+
+background-size:120px 120px;
+
+filter:blur(.6px);
+
+opacity:.35;
+
+animation:
+
+dustMove 240s linear infinite;
 
 z-index:-2;
+
+}
+/*==================================================
+ AURORA RIBBONS
+==================================================*/
+
+.aurora{
+
+position:fixed;
+
+inset:-35%;
+
+pointer-events:none;
+
+z-index:-1;
+
+overflow:hidden;
+
+mix-blend-mode:screen;
+
+opacity:.45;
+
+filter:blur(80px);
+
+animation:
+
+auroraFloat 90s ease-in-out infinite alternate;
+
+}
+
+.aurora::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+70deg,
+
+transparent 0%,
+
+rgba(141,77,255,.55) 18%,
+
+transparent 30%,
+
+rgba(79,174,255,.45) 48%,
+
+transparent 58%,
+
+rgba(184,255,56,.28) 72%,
+
+transparent 82%
+
+);
+
+transform:rotate(-10deg) scale(1.5);
+
+}
+
+.aurora::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+-65deg,
+
+transparent 5%,
+
+rgba(79,174,255,.40) 28%,
+
+transparent 42%,
+
+rgba(141,77,255,.40) 58%,
+
+transparent 72%,
+
+rgba(184,255,56,.22) 90%
+
+);
+
+transform:rotate(12deg) scale(1.4);
 
 }
 
@@ -291,7 +413,87 @@ opacity:.95;
 }
 
 }
+@keyframes starDrift{
 
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-60px);
+
+}
+
+}
+
+@keyframes dustMove{
+
+from{
+
+transform:
+translate(-40px,-20px);
+
+}
+
+to{
+
+transform:
+translate(40px,30px);
+
+}
+
+}
+@keyframes auroraText{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+@keyframes auroraFloat{
+
+0%{
+
+transform:
+translate(-3%,-2%)
+scale(1);
+
+}
+
+50%{
+
+transform:
+translate(3%,2%)
+scale(1.08);
+
+}
+
+100%{
+
+transform:
+translate(-2%,3%)
+scale(1.15);
+
+}
+
+}
 /*==================================================
  GLOBAL ELEMENTS
 ==================================================*/
@@ -319,31 +521,40 @@ color:var(--text);
 }
 
 /*==================================================
- GALAXY HEADINGS
+ LIVING AURORA HEADINGS
 ==================================================*/
 
 h1,
 h2,
 h3{
 
+font-weight:800;
+
 background:
 
 linear-gradient(
-90deg,
-var(--purple),
-var(--blue),
-var(--green)
+120deg,
+#C98DFF 0%,
+#7C6CFF 20%,
+#4FAEFF 45%,
+#7FE7FF 60%,
+#B8FF38 82%,
+#D8FF8A 100%
 );
 
+background-size:300% 300%;
+
 -webkit-background-clip:text;
-
 background-clip:text;
-
 -webkit-text-fill-color:transparent;
 
-text-shadow:none;
+animation:
 
-font-weight:800;
+auroraText 12s ease-in-out infinite;
+
+filter:
+
+drop-shadow(0 0 18px rgba(141,77,255,.35));
 
 }
 
