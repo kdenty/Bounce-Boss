@@ -368,30 +368,6 @@ transform:rotate(12deg) scale(1.4);
  ANIMATIONS
 ==================================================*/
 
-@keyframes nebulaMove{
-
-0%{
-
-transform:
-
-translate(-20px,-15px)
-
-scale(1);
-
-}
-
-100%{
-
-transform:
-
-translate(25px,20px)
-
-scale(1.12);
-
-}
-
-}
-
 @keyframes twinkle{
 
 0%{
@@ -1423,15 +1399,17 @@ box-shadow:none;
 }
 
 
-.inventory-info h3{
+.cta h2{
 
-margin-bottom:16px;
+font-size:clamp(2.5rem,4vw,3.4rem);
 
-font-size:1.6rem;
+margin-bottom:24px;
 
 background-size:300% 300%;
 
 animation:auroraText 12s ease-in-out infinite;
+
+filter:drop-shadow(0 0 22px rgba(122,59,255,.35));
 
 }
  
