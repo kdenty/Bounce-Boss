@@ -82,7 +82,7 @@ body::before{
     rgba(70,170,255,.18) 0%,
     rgba(70,170,255,.08) 35%,
     rgba(184,255,56,.08) 70%,
-    transparent 100%,
+    transparent 100%
 ),
 
     linear-gradient(
