@@ -60,8 +60,9 @@ position:relative;
 
 }
 
+
 /*==================================================
- GALAXY BACKGROUND
+ GALAXY ENGINE v10
 ==================================================*/
 
 body::before{
@@ -70,46 +71,133 @@ content:"";
 
 position:fixed;
 
-inset:-15%;
+inset:-35%;
 
 pointer-events:none;
 
 background:
 
-radial-gradient(circle at 12% 18%,
-rgba(141,77,255,.70),
-transparent 34%),
+radial-gradient(circle at 8% 12%,
+rgba(155,90,255,.95),
+transparent 20%),
 
-radial-gradient(circle at 85% 20%,
-rgba(79,174,255,.65),
-transparent 38%),
-
-radial-gradient(circle at 72% 82%,
-rgba(184,255,56,.22),
+radial-gradient(circle at 18% 40%,
+rgba(115,70,255,.75),
 transparent 24%),
 
-radial-gradient(circle at 40% 70%,
-rgba(120,70,255,.45),
-transparent 34%),
+radial-gradient(circle at 35% 18%,
+rgba(70,170,255,.75),
+transparent 22%),
+
+radial-gradient(circle at 55% 32%,
+rgba(40,130,255,.55),
+transparent 24%),
+
+radial-gradient(circle at 74% 15%,
+rgba(184,255,56,.28),
+transparent 16%),
+
+radial-gradient(circle at 92% 28%,
+rgba(120,80,255,.55),
+transparent 18%),
+
+radial-gradient(circle at 82% 62%,
+rgba(60,170,255,.45),
+transparent 24%),
+
+radial-gradient(circle at 65% 88%,
+rgba(160,90,255,.70),
+transparent 22%),
+
+radial-gradient(circle at 28% 82%,
+rgba(184,255,56,.20),
+transparent 18%),
 
 linear-gradient(
+
 180deg,
-#010204,
-#040615,
-#050817,
+
+#010104,
+
+#030612,
+
+#04081B,
+
 #02030A
+
 );
 
-filter:blur(100px);
+background-size:
+
+150% 150%;
+
+filter:
+
+blur(120px)
+
+saturate(145%);
 
 animation:
 
-nebulaMove 90s ease-in-out infinite alternate;
+galaxyFlow 120s ease-in-out infinite alternate;
 
-z-index:-3;
+z-index:-4;
 
 }
 
+@keyframes galaxyFlow{
+
+0%{
+
+transform:
+
+translate(-6%,-4%)
+
+scale(1);
+
+}
+
+25%{
+
+transform:
+
+translate(3%,2%)
+
+scale(1.08);
+
+}
+
+50%{
+
+transform:
+
+translate(-2%,6%)
+
+scale(1.14);
+
+}
+
+75%{
+
+transform:
+
+translate(4%,-2%)
+
+scale(1.10);
+
+}
+
+100%{
+
+transform:
+
+translate(-4%,4%)
+
+scale(1.16);
+
+}
+
+}
 /*==================================================
  STARFIELD
 ==================================================*/
