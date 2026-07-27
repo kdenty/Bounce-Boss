@@ -136,16 +136,12 @@ body::before{
     ),
 
     linear-gradient(
-        180deg,
-
-        #010208,
-
-        #030616,
-
-        #04081B,
-
-        #02030B
-    );
+    180deg,
+    #17103A,
+    #1A2454,
+    #142F63,
+    #1B1640
+);
 
     background-size:
 
@@ -344,11 +340,11 @@ ANIMATIONS
         scale(1.08);
     }
 
-    100%{
-        transform:
-        translate(-5%,3%)
-        scale(1.14);
-    }
+100%{
+      transform: 
+      translate(-2%,2%) 
+      scale(1.06);
+}
 
 }
 
