@@ -1,4 +1,4 @@
-/*==================================================
+8/*==================================================
  Bounce Boss Website v9.0
  Galaxy Edition
  Part 1 of 5
@@ -60,416 +60,527 @@ position:relative;
 
 }
 
-
 /*==================================================
- GALAXY ENGINE v10
+GALAXY ENGINE v11
+Premium Flowing Nebula
 ==================================================*/
+
+body{
+
+    background:#010208;
+    position:relative;
+    overflow-x:hidden;
+
+}
+
+/*==============================
+MAIN NEBULA
+==============================*/
 
 body::before{
 
-content:"";
+    content:"";
 
-position:fixed;
+    position:fixed;
 
-inset:-35%;
+    inset:-45%;
 
-pointer-events:none;
+    pointer-events:none;
 
-background:
+    z-index:-5;
 
-radial-gradient(circle at 8% 12%,
-rgba(155,90,255,.95),
-transparent 20%),
+    background:
 
-radial-gradient(circle at 18% 40%,
-rgba(115,70,255,.75),
-transparent 24%),
+    linear-gradient(
+        115deg,
 
-radial-gradient(circle at 35% 18%,
-rgba(70,170,255,.75),
-transparent 22%),
+        rgba(125,70,255,.18) 0%,
 
-radial-gradient(circle at 55% 32%,
-rgba(40,130,255,.55),
-transparent 24%),
+        rgba(125,70,255,.05) 18%,
 
-radial-gradient(circle at 74% 15%,
-rgba(184,255,56,.28),
-transparent 16%),
+        rgba(70,170,255,.15) 36%,
 
-radial-gradient(circle at 92% 28%,
-rgba(120,80,255,.55),
-transparent 18%),
+        rgba(70,170,255,.02) 52%,
 
-radial-gradient(circle at 82% 62%,
-rgba(60,170,255,.45),
-transparent 24%),
+        rgba(184,255,56,.08) 70%,
 
-radial-gradient(circle at 65% 88%,
-rgba(160,90,255,.70),
-transparent 22%),
+        rgba(184,255,56,.01) 82%,
 
-radial-gradient(circle at 28% 82%,
-rgba(184,255,56,.20),
-transparent 18%),
+        transparent 100%
+    ),
 
-linear-gradient(
+    linear-gradient(
+        -65deg,
 
-180deg,
+        rgba(120,80,255,.20),
 
-#010104,
+        transparent 28%,
 
-#030612,
+        rgba(80,170,255,.14),
 
-#04081B,
+        transparent 58%,
 
-#02030A
+        rgba(184,255,56,.08),
 
-);
+        transparent 82%
+    ),
 
-background-size:
+    radial-gradient(
+        ellipse at 20% 20%,
 
-150% 150%;
+        rgba(150,90,255,.55),
 
-filter:
+        transparent 45%
+    ),
 
-blur(120px)
+    radial-gradient(
+        ellipse at 80% 30%,
 
-saturate(145%);
+        rgba(70,170,255,.35),
 
-animation:
+        transparent 40%
+    ),
 
-galaxyFlow 120s ease-in-out infinite alternate;
+    radial-gradient(
+        ellipse at 50% 85%,
 
-z-index:-4;
+        rgba(150,80,255,.40),
 
-}
+        transparent 48%
+    ),
 
-@keyframes galaxyFlow{
+    linear-gradient(
+        180deg,
 
-0%{
+        #010208,
 
-transform:
+        #030616,
 
-translate(-6%,-4%)
+        #04081B,
 
-scale(1);
+        #02030B
+    );
 
-}
+    background-size:
 
-25%{
+        180% 180%,
+        180% 180%,
+        140% 140%,
+        160% 160%,
+        150% 150%,
+        cover;
 
-transform:
+    filter:
 
-translate(3%,2%)
+        blur(130px)
+        saturate(170%)
+        contrast(115%);
 
-scale(1.08);
+    animation:
 
-}
-
-50%{
-
-transform:
-
-translate(-2%,6%)
-
-scale(1.14);
+        galaxyFloat 90s ease-in-out infinite alternate;
 
 }
 
-75%{
-
-transform:
-
-translate(4%,-2%)
-
-scale(1.10);
-
-}
-
-100%{
-
-transform:
-
-translate(-4%,4%)
-
-scale(1.16);
-
-}
-
-}
-/*==================================================
- GALAXY STARFIELD v10
-==================================================*/
+/*==============================
+SECONDARY NEBULA
+==============================*/
 
 body::after{
 
-content:"";
+    content:"";
 
-position:fixed;
+    position:fixed;
 
-inset:0;
+    inset:-35%;
 
-pointer-events:none;
+    pointer-events:none;
 
-background:
+    z-index:-4;
 
-radial-gradient(circle at 15% 20%,rgba(255,255,255,.95) 1px,transparent 1.6px),
-radial-gradient(circle at 75% 30%,rgba(255,255,255,.75) 1px,transparent 1.5px),
-radial-gradient(circle at 35% 80%,rgba(255,255,255,.85) .9px,transparent 1.4px),
-radial-gradient(circle at 90% 65%,rgba(141,77,255,.55) 1.2px,transparent 2px),
-radial-gradient(circle at 55% 12%,rgba(79,174,255,.45) 1px,transparent 2px),
-radial-gradient(circle at 18% 72%,rgba(184,255,56,.35) .9px,transparent 2px),
-radial-gradient(circle at 62% 48%,rgba(255,255,255,.60) .8px,transparent 1.5px),
-radial-gradient(circle at 8% 90%,rgba(255,255,255,.90) 1px,transparent 2px);
+    opacity:.55;
 
-background-size:
+    background:
 
-220px 220px,
-340px 340px,
-420px 420px,
-520px 520px,
-620px 620px,
-760px 760px,
-900px 900px,
-1100px 1100px;
+    repeating-linear-gradient(
 
-opacity:.95;
+        130deg,
 
-animation:
+        transparent 0px,
 
-starDrift 180s linear infinite,
-twinkle 8s ease-in-out infinite alternate;
+        transparent 180px,
 
-z-index:-3;
+        rgba(130,80,255,.08) 220px,
+
+        transparent 340px
+
+    ),
+
+    repeating-linear-gradient(
+
+        -60deg,
+
+        transparent 0px,
+
+        transparent 220px,
+
+        rgba(80,170,255,.06) 260px,
+
+        transparent 420px
+
+    );
+
+    filter:
+
+        blur(70px);
+
+    animation:
+
+        ribbonMove 120s linear infinite;
+
+}
+
+/*==============================
+STAR LAYER
+==============================*/
+
+.space-dust{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-3;
+
+    opacity:.9;
+
+    background:
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.8px);
+
+    background-size:
+
+        180px 180px;
+
+    animation:
+
+        starDrift 260s linear infinite;
 
 }
 
-/* Floating space dust */
-
-body .space-dust{
-
-position:fixed;
-
-inset:-20%;
-
-pointer-events:none;
-
-background:
-
-radial-gradient(rgba(255,255,255,.05) 1px,transparent 2px);
-
-background-size:120px 120px;
-
-filter:blur(.6px);
-
-opacity:.35;
-
-animation:
-
-dustMove 240s linear infinite;
-
-z-index:-2;
-
-}
-/*==================================================
- AURORA RIBBONS
-==================================================*/
+/*==============================
+AURORA
+==============================*/
 
 .aurora{
 
-position:fixed;
+    position:fixed;
 
-inset:-35%;
+    inset:-25%;
 
-pointer-events:none;
+    pointer-events:none;
 
-z-index:-1;
+    z-index:-2;
 
-overflow:hidden;
+    mix-blend-mode:screen;
 
-mix-blend-mode:screen;
+    opacity:.55;
 
-opacity:.45;
-
-filter:blur(80px);
-
-animation:
-
-auroraFloat 90s ease-in-out infinite alternate;
+    filter:blur(90px);
 
 }
 
 .aurora::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:
+    background:
 
-linear-gradient(
-70deg,
+    linear-gradient(
 
-transparent 0%,
+        75deg,
 
-rgba(141,77,255,.55) 18%,
+        transparent,
 
-transparent 30%,
+        rgba(155,90,255,.40),
 
-rgba(79,174,255,.45) 48%,
+        transparent 34%,
 
-transparent 58%,
+        rgba(70,170,255,.30),
 
-rgba(184,255,56,.28) 72%,
+        transparent 58%,
 
-transparent 82%
+        rgba(184,255,56,.18),
 
-);
+        transparent
 
-transform:rotate(-10deg) scale(1.5);
+    );
 
-}
+    animation:
 
-.aurora::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-
-linear-gradient(
--65deg,
-
-transparent 5%,
-
-rgba(79,174,255,.40) 28%,
-
-transparent 42%,
-
-rgba(141,77,255,.40) 58%,
-
-transparent 72%,
-
-rgba(184,255,56,.22) 90%
-
-);
-
-transform:rotate(12deg) scale(1.4);
+        auroraOne 60s ease-in-out infinite alternate;
 
 }
 
-/*==================================================
- ANIMATIONS
-==================================================*/
+/*==============================
+ANIMATIONS
+==============================*/
+
+@keyframes galaxyFloat{
+
+    0%{
+        transform:
+        translate(-6%,-4%)
+        scale(1);
+    }
+
+    25%{
+        transform:
+        translate(4%,2%)
+        scale(1.05);
+    }
+
+    50%{
+        transform:
+        translate(-3%,5%)
+        scale(1.10);
+    }
+
+    75%{
+        transform:
+        translate(2%,-2%)
+        scale(1.08);
+    }
+
+    100%{
+        transform:
+        translate(-5%,3%)
+        scale(1.14);
+    }
+
+}
+
+@keyframes ribbonMove{
+
+    from{
+
+        transform:
+        rotate(0deg)
+        scale(1);
+
+    }
+
+    to{
+
+        transform:
+        rotate(3deg)
+        scale(1.08);
+
+    }
+
+}
+
+@keyframes starDrift{
+
+    from{
+
+        transform:
+        translateY(0);
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120px);
+
+    }
+
+}
 
 @keyframes twinkle{
 
-0%{
+    0%{
 
-opacity:.45;
+        opacity:.45;
 
-}
+    }
 
-50%{
+    50%{
 
-opacity:.75;
+        opacity:.95;
 
-}
+    }
 
-100%{
+    100%{
 
-opacity:.95;
+        opacity:.55;
 
-}
-
-}
-@keyframes starDrift{
-
-from{
-
-transform:translateY(0);
+    }
 
 }
 
-to{
+@keyframes auroraOne{
 
-transform:translateY(-60px);
+    0%{
+
+        transform:
+        translate(-8%,0%)
+        rotate(-8deg)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(4%,3%)
+        rotate(-5deg)
+        scale(1.08);
+
+    }
+
+    100%{
+
+        transform:
+        translate(-2%,6%)
+        rotate(-2deg)
+        scale(1.15);
+
+    }
 
 }
 
+@keyframes auroraTwo{
+
+    0%{
+
+        transform:
+        translate(8%,-4%)
+        rotate(10deg)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-4%,3%)
+        rotate(6deg)
+        scale(1.08);
+
+    }
+
+    100%{
+
+        transform:
+        translate(3%,6%)
+        rotate(2deg)
+        scale(1.15);
+
+    }
+
 }
 
-@keyframes dustMove{
-
-from{
-
-transform:
-translate(-40px,-20px);
-
-}
-
-to{
-
-transform:
-translate(40px,30px);
-
-}
-
-}
 @keyframes auroraText{
 
-0%{
+    0%{
 
-background-position:0% 50%;
+        background-position:0% 50%;
 
-}
+    }
 
-50%{
+    50%{
 
-background-position:100% 50%;
+        background-position:100% 50%;
 
-}
+    }
 
-100%{
+    100%{
 
-background-position:0% 50%;
+        background-position:0% 50%;
 
-}
-
-}
-@keyframes auroraFloat{
-
-0%{
-
-transform:
-translate(-3%,-2%)
-scale(1);
+    }
 
 }
 
-50%{
+/*==============================
+EXTRA STAR TWINKLE
+==============================*/
 
-transform:
-translate(3%,2%)
-scale(1.08);
+.space-dust::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at 10% 20%,rgba(255,255,255,.9) 1px,transparent 2px),
+        radial-gradient(circle at 70% 35%,rgba(255,255,255,.8) 1px,transparent 2px),
+        radial-gradient(circle at 30% 80%,rgba(255,255,255,.9) 1px,transparent 2px),
+        radial-gradient(circle at 85% 60%,rgba(184,255,56,.6) 1px,transparent 2px),
+        radial-gradient(circle at 55% 12%,rgba(79,174,255,.6) 1px,transparent 2px);
+
+    background-size:
+
+        400px 400px,
+        500px 500px,
+        650px 650px,
+        800px 800px,
+        950px 950px;
+
+    animation:
+
+        twinkle 6s ease-in-out infinite alternate;
+
+    opacity:.75;
+
+}
+.aurora::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        -70deg,
+
+        transparent,
+
+        rgba(70,170,255,.24),
+
+        transparent 38%,
+
+        rgba(150,90,255,.28),
+
+        transparent 68%,
+
+        rgba(184,255,56,.14),
+
+        transparent
+
+    );
+
+    animation:
+
+        auroraTwo 80s ease-in-out infinite alternate;
 
 }
 
-100%{
-
-transform:
-translate(-2%,3%)
-scale(1.15);
-
-}
-
-}
 /*==================================================
  GLOBAL ELEMENTS
 ==================================================*/
