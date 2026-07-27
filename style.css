@@ -504,7 +504,7 @@ EXTRA STAR TWINKLE
 
     content:"";
 
-    position: fixed;
+    position: absolute;
 
     inset:0;
 
@@ -532,7 +532,7 @@ EXTRA STAR TWINKLE
 
     animation:
 
-        auroraTwo 80s ease-in-out infinite alternate;
+        none0;
 
 }
 
