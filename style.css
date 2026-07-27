@@ -78,27 +78,17 @@ body::before{
     background:
 
     linear-gradient(
-        115deg,
-
-        rgba(125,70,255,.18) 0%,
-
-        rgba(125,70,255,.05) 18%,
-
-        rgba(70,170,255,.15) 36%,
-
-        rgba(70,170,255,.02) 52%,
-
-        rgba(184,255,56,.08) 70%,
-
-        rgba(184,255,56,.01) 82%,
-
-        transparent 100%
-    ),
+    115deg,
+    rgba(70,170,255,.18) 0%,
+    rgba(70,170,255,.08) 35%,
+    rgba(184,255,56,.08) 70%,
+    transparent 100%
+)
 
     linear-gradient(
         -65deg,
 
-        rgba(120,80,255,.20),
+        rgba(70,170,255,.12)
 
         transparent 28%,
 
@@ -112,27 +102,11 @@ body::before{
     ),
 
     radial-gradient(
-        ellipse at 20% 20%,
-
-        rgba(150,90,255,.55),
-
-        transparent 45%
-    ),
-
-    radial-gradient(
         ellipse at 80% 30%,
 
         rgba(70,170,255,.35),
 
         transparent 40%
-    ),
-
-    radial-gradient(
-        ellipse at 50% 85%,
-
-        rgba(150,80,255,.40),
-
-        transparent 48%
     ),
 
     linear-gradient(
