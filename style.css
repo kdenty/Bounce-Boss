@@ -1,4 +1,4 @@
-8/*==================================================
+/*==================================================
  Bounce Boss Website v9.0
  Galaxy Edition
  Part 1 of 5
@@ -39,26 +39,6 @@ scroll-behavior:smooth;
 
 }
 
-body{
-
-font-family:
-
-"Segoe UI",
-Arial,
-Helvetica,
-sans-serif;
-
-color:var(--white);
-
-line-height:1.8;
-
-overflow-x:hidden;
-
-background:#02030A;
-
-position:relative;
-
-}
 
 /*==================================================
 GALAXY ENGINE v11
@@ -66,11 +46,17 @@ Premium Flowing Nebula
 ==================================================*/
 
 body{
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
 
+    color:var(--white);
+    line-height:1.8;
+    overflow-x:hidden;
     background:#010208;
     position:relative;
-    overflow-x:hidden;
-
 }
 
 /*==============================
