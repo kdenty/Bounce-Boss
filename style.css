@@ -231,7 +231,7 @@ AURORA
 
 .aurora{
 
-    position: absolute;
+    position: fixed;
 
     inset:-25%;
 
