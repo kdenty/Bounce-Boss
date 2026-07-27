@@ -128,7 +128,7 @@ body::before{
 
     filter:
 
-        blur(130px)
+        blur(50px)
         saturate(170%)
         contrast(115%);
 
@@ -280,7 +280,7 @@ AURORA
 
     animation:
 
-        auroraOne 60s ease-in-out infinite alternate;
+        none;
 
 }
 
