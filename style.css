@@ -251,7 +251,7 @@ AURORA
 
     content:"";
 
-    position: fixed;
+    position: absolute;
 
     inset:0;
 
