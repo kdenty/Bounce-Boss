@@ -1758,6 +1758,45 @@ border-radius:999px;
 }
 
 /*==================================================
+ TRUST BADGES
+==================================================*/
+
+.trust-badges{
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:40px;
+
+margin:50px auto;
+
+}
+
+.trust-badges img{
+
+width:min(280px,90%);
+height:auto;
+
+filter:
+drop-shadow(0 0 18px rgba(79,174,255,.25));
+
+transition:.35s ease;
+
+}
+
+.trust-badges img:hover{
+
+transform:
+translateY(-5px)
+scale(1.03);
+
+filter:
+drop-shadow(0 0 35px rgba(79,174,255,.45));
+
+}
+
+/*==================================================
  REDUCED MOTION
 ==================================================*/
 
