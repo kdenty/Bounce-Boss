@@ -139,26 +139,71 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-    /*==============================================
-      CUPCAKE CAROUSEL
-    ==============================================*/
+    /*==================================================
+ CUPCAKE CAROUSEL
+ AUTO + SWIPE
+==================================================*/
 
-    document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
+document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
 
-        const slides = carousel.querySelectorAll(".cupcake-slide");
+    const slides = carousel.querySelectorAll(".cupcake-slide");
 
-        if (slides.length <= 1) return;
+    if (slides.length <= 1) return;
 
-        let currentSlide = 0;
+    let currentSlide = 0;
+    let startX = 0;
+    let endX = 0;
 
-        setInterval(() => {
+    function showSlide(index) {
 
-            slides[currentSlide].classList.remove("active");
+        slides[currentSlide].classList.remove("active");
 
-            currentSlide = (currentSlide + 1) % slides.length;
+        currentSlide = (index + slides.length) % slides.length;
 
-            slides[currentSlide].classList.add("active");
+        slides[currentSlide].classList.add("active");
 
-        }, 4000);
+    }
+
+    /* AUTOMATIC SLIDESHOW */
+
+    setInterval(() => {
+
+        showSlide(currentSlide + 1);
+
+    }, 4000);
+
+
+    /* SWIPE SUPPORT */
+
+    carousel.addEventListener("touchstart", (event) => {
+
+        startX = event.touches[0].clientX;
+
+    }, { passive: true });
+
+
+    carousel.addEventListener("touchend", (event) => {
+
+        endX = event.changedTouches[0].clientX;
+
+        const difference = startX - endX;
+
+        /* Swipe left */
+
+        if (difference > 50) {
+
+            showSlide(currentSlide + 1);
+
+        }
+
+        /* Swipe right */
+
+        else if (difference < -50) {
+
+            showSlide(currentSlide - 1);
+
+        }
+
+    }, { passive: true });
 
 });
