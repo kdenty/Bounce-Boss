@@ -137,26 +137,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-/*==================================================
- CUPCAKE CAROUSEL
-==================================================*/
 
-document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
 
-    const slides = carousel.querySelectorAll(".cupcake-slide");
+    /*==============================================
+      CUPCAKE CAROUSEL
+    ==============================================*/
 
-    if (slides.length <= 1) return;
+    document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
 
-    let currentSlide = 0;
+        const slides = carousel.querySelectorAll(".cupcake-slide");
 
-    setInterval(() => {
+        if (slides.length <= 1) return;
 
-        slides[currentSlide].classList.remove("active");
+        let currentSlide = 0;
 
-        currentSlide = (currentSlide + 1) % slides.length;
+        setInterval(() => {
 
-        slides[currentSlide].classList.add("active");
+            slides[currentSlide].classList.remove("active");
 
-    }, 4000);
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+
+        }, 4000);
 
 });
