@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /*==================================================
  CUPCAKE CAROUSEL
- AUTO + SWIPE
+ Automatic 4 Second + Tap To Advance
 ==================================================*/
 
 document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
@@ -151,59 +151,21 @@ document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
     if (slides.length <= 1) return;
 
     let currentSlide = 0;
-    let startX = 0;
-    let endX = 0;
 
-    function showSlide(index) {
+    function showNextSlide() {
 
         slides[currentSlide].classList.remove("active");
 
-        currentSlide = (index + slides.length) % slides.length;
+        currentSlide = (currentSlide + 1) % slides.length;
 
         slides[currentSlide].classList.add("active");
 
     }
 
-    /* AUTOMATIC SLIDESHOW */
+    /* Automatic change every 4 seconds */
+    setInterval(showNextSlide, 4000);
 
-    setInterval(() => {
-
-        showSlide(currentSlide + 1);
-
-    }, 4000);
-
-
-    /* SWIPE SUPPORT */
-
-    carousel.addEventListener("touchstart", (event) => {
-
-        startX = event.touches[0].clientX;
-
-    }, { passive: true });
-
-
-    carousel.addEventListener("touchend", (event) => {
-
-        endX = event.changedTouches[0].clientX;
-
-        const difference = startX - endX;
-
-        /* Swipe left */
-
-        if (difference > 50) {
-
-            showSlide(currentSlide + 1);
-
-        }
-
-        /* Swipe right */
-
-        else if (difference < -50) {
-
-            showSlide(currentSlide - 1);
-
-        }
-
-    }, { passive: true });
+    /* Tap/click advances to next image */
+    carousel.addEventListener("click", showNextSlide);
 
 });
