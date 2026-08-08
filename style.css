@@ -1809,23 +1809,17 @@ drop-shadow(0 0 35px rgba(79,174,255,.45));
 
 @media (max-width:600px){
 
-.trust-badges{
+    .trust-badges{
+        gap:18px;
+        margin:30px auto 20px;
+        justify-content:center;
+    }
 
-gap:12px;
-
-margin:-8px auto 12px;
-
-}
-
-.trust-badges img{
-
-width:115px;
-
-height:55px;
-
-max-width:42%;
-
-}
+    .trust-badges img{
+        width:145px;
+        max-width:45%;
+        height:auto;
+    }
 
 }
 /*==================================================
