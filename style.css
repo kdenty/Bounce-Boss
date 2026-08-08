@@ -1758,25 +1758,34 @@ border-radius:999px;
 }
 
 /*==================================================
- TRUST BADGES
+ TRUST BADGES - TOP POSITION
 ==================================================*/
 
 .trust-badges{
 
 display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:40px;
 
-margin:35px auto 25px;
+justify-content:center;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+margin:-5px auto 15px;
 
 }
 
 .trust-badges img{
 
-width:min(280px,90%);
-height:auto;
+width:140px;
+
+max-width:40%;
+
+height:70px;
+
+object-fit:contain;
 
 filter:
 drop-shadow(0 0 18px rgba(79,174,255,.25));
@@ -1789,13 +1798,36 @@ transition:.35s ease;
 
 transform:
 translateY(-5px)
-scale(1.03);
+scale(1.05);
 
 filter:
 drop-shadow(0 0 35px rgba(79,174,255,.45));
 
 }
 
+/* Mobile */
+
+@media (max-width:600px){
+
+.trust-badges{
+
+gap:12px;
+
+margin:-8px auto 12px;
+
+}
+
+.trust-badges img{
+
+width:115px;
+
+height:55px;
+
+max-width:42%;
+
+}
+
+}
 /*==================================================
  REDUCED MOTION
 ==================================================*/
