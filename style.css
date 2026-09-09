@@ -1905,6 +1905,69 @@ iframe[src*="://google.com"] {
 
 }
 
+/* =========================================
+   AUTISM SOCIETY ALBERTA PARTNERSHIP
+   ========================================= */
+
+.autism-partner-section {
+    width: 100%;
+    padding: 70px 20px;
+    background: #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.autism-partner-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.autism-partner-heading {
+    margin: 0 0 25px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.autism-partner-logo {
+    display: block;
+    width: min(100%, 700px);
+    height: auto;
+    margin: 0 auto 25px;
+}
+
+.autism-partner-message {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #444444;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .autism-partner-section {
+        padding: 50px 15px;
+    }
+
+    .autism-partner-heading {
+        font-size: 1.15rem;
+        letter-spacing: 1.5px;
+    }
+
+    .autism-partner-logo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .autism-partner-message {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
 /*==================================================
  Bounce Boss Website v9.0
 
