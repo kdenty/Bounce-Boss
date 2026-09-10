@@ -1629,9 +1629,10 @@ text-shadow:
 
 .hero-banner{
 
-height:42vh;
-
-min-height:240px;
+width:100%;
+height:auto;
+min-height:0;
+object-fit:contain;
 
 }
 
