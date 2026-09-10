@@ -1948,11 +1948,14 @@ iframe[src*="://google.com"] {
    ========================================= */
 
 .autism-partner-section {
-    width: 100%;
-    padding: 60px 20px;
+    width: 92%;
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 60px 25px;
     background: #ffffff;
     text-align: center;
     box-sizing: border-box;
+    border-radius: 24px;
 }
 
 .autism-partner-content {
@@ -2008,7 +2011,10 @@ iframe[src*="://google.com"] {
 @media (max-width: 600px) {
 
     .autism-partner-section {
+        width: 92%;
+        margin: 30px auto;
         padding: 35px 15px;
+        border-radius: 20px;
     }
 
     .autism-partner-logo {
