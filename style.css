@@ -758,6 +758,43 @@ transparent 100%
 );
 
 }
+/*==================================================
+ MAIN PAGE HERO LOGO
+==================================================*/
+
+.main-hero-logo{
+
+    display:block;
+
+    width:min(90%,900px);
+
+    height:auto;
+
+    margin:35px auto 20px;
+
+    background:transparent;
+
+    filter:
+        drop-shadow(0 0 18px rgba(141,77,255,.25));
+
+}
+
+
+/*==================================================
+ MAIN HERO - MOBILE
+==================================================*/
+
+@media (max-width:600px){
+
+    .main-hero-logo{
+
+        width:94%;
+
+        margin:25px auto 10px;
+
+    }
+
+}
 
 /*==================================================
  HERO CONTENT
