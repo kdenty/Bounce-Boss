@@ -1945,7 +1945,28 @@ iframe[src*="://google.com"] {
     line-height: 1.7;
     color: #444444;
 }
+.autism-direct-donation-text {
+    margin: 25px 0 15px;
+    font-size: 1rem;
+    color: #555555;
+}
 
+.autism-donate-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+    background: #5b3b8a;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.autism-donate-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
 /* Mobile */
 @media (max-width: 600px) {
 
