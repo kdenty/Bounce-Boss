@@ -2004,60 +2004,31 @@ iframe[src*="://google.com"] {
 }
 
 
-/* =========================================
-   MOBILE
-   ========================================= */
 
-@media (max-width: 600px) {
-
-    .autism-partner-section {
-        width: 92%;
-        margin: 30px auto;
-        padding: 35px 15px;
-        border-radius: 20px;
-    }
-
-    .autism-partner-logo {
-        width: 82%;
-        max-width: 420px;
-        margin: 0 auto 20px;
-    }
-
-    .autism-partner-message {
-        font-size: 1rem;
-        line-height: 1.55;
-    }
-
-    .autism-direct-donation-text {
-        margin: 22px 0 14px;
-        font-size: 0.95rem;
-    }
-
-    .autism-donate-button {
-        max-width: 90%;
-        padding: 12px 20px;
-        font-size: 0.9rem;
-    }
-}
 /* SOCIAL FOOTER */
 .social-footer {
     margin: 25px auto 10px;
+    padding: 0 12px 115px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 12px;
+    box-sizing: border-box;
 }
 
 .social-footer p {
     flex-basis: 100%;
-    margin-bottom: 5px;
+    margin: 0 0 5px;
     color: var(--white);
     font-weight: 800;
 }
 
 .social-footer a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
     padding: 10px 18px;
     border: 1px solid var(--green);
     border-radius: 25px;
@@ -2065,6 +2036,14 @@ iframe[src*="://google.com"] {
     background: rgba(141, 77, 255, 0.12);
     font-weight: 700;
     transition: all var(--speed);
+    white-space: nowrap;
+}
+
+.social-footer .social-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
 }
 
 .social-footer a:hover {
@@ -2082,12 +2061,22 @@ iframe[src*="://google.com"] {
 @media (max-width: 600px) {
     .social-footer {
         gap: 10px;
+        padding-bottom: 145px;
     }
 
     .social-footer a {
-        padding: 10px 14px;
+        padding: 10px 12px;
+        gap: 7px;
+        font-size: 0.95rem;
+    }
+
+    .social-footer .social-icon {
+        width: 18px;
+        height: 18px;
+        flex-basis: 18px;
     }
 }
+
 /*==================================================
  Bounce Boss Website v9.0
 
