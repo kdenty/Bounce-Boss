@@ -2005,50 +2005,62 @@ iframe[src*="://google.com"] {
 
 
 
-/* SOCIAL FOOTER */
+
+/* =========================================
+   SOCIAL FOOTER — BOUNCE BOSS GALAXY EDITION
+========================================= */
+
 .social-footer {
     margin: 25px auto 10px;
-    padding: 0 12px 115px;
+    padding: 0 12px 190px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     box-sizing: border-box;
 }
 
 .social-footer p {
     flex-basis: 100%;
-    margin: 0 0 5px;
+    margin: 0 0 8px;
     color: var(--white);
     font-weight: 800;
+    font-size: 1.15rem;
+    text-align: center;
 }
 
 .social-footer a {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 9px;
-    padding: 10px 18px;
+    gap: 12px;
+    min-width: 145px;
+    padding: 18px 20px;
     border: 1px solid var(--green);
     border-radius: 25px;
-    color: var(--white);
     background: rgba(141, 77, 255, 0.12);
+    color: var(--white);
     font-weight: 700;
+    text-decoration: none;
+    text-align: center;
     transition: all var(--speed);
-    white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .social-footer .social-icon {
     display: block;
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+    object-fit: contain;
 }
 
 .social-footer a:hover {
     color: var(--green);
     border-color: var(--green);
+    background: rgba(141, 77, 255, 0.24);
     transform: translateY(-3px);
     box-shadow: 0 0 18px rgba(184, 255, 56, 0.2);
 }
@@ -2058,24 +2070,36 @@ iframe[src*="://google.com"] {
     outline-offset: 4px;
 }
 
+/* MOBILE SOCIAL FOOTER */
 @media (max-width: 600px) {
     .social-footer {
         gap: 10px;
-        padding-bottom: 145px;
+        padding: 0 8px 190px;
+    }
+
+    .social-footer p {
+        font-size: 1.05rem;
     }
 
     .social-footer a {
-        padding: 10px 12px;
-        gap: 7px;
-        font-size: 0.95rem;
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 155px;
+        padding: 14px 8px;
+        gap: 9px;
+        border-radius: 22px;
+        font-size: 0.9rem;
+        white-space: normal;
+        overflow-wrap: anywhere;
     }
 
     .social-footer .social-icon {
-        width: 18px;
-        height: 18px;
-        flex-basis: 18px;
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
     }
 }
+
 
 /*==================================================
  Bounce Boss Website v9.0
