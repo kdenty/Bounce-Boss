@@ -2100,6 +2100,44 @@ iframe[src*="://google.com"] {
     }
 }
 
+/* CONTACT PAGE PHONE AND EMAIL STYLING */
+.container .inventory-info a[href^="tel:"] {
+    display: inline-block;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.3;
+    text-decoration: none;
+    background: linear-gradient(
+        90deg,
+        #8D4DFF,
+        #4FAEFF,
+        #B8FF38
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #8D4DFF;
+    overflow-wrap: normal;
+}
+
+.container .inventory-info a[href^="tel:"]:hover {
+    filter: brightness(1.2);
+}
+
+.container .inventory-info a[href^="mailto:"] {
+    display: inline-block;
+    color: #B8FF38;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-weight: 800;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.container .inventory-info a[href^="mailto:"]:hover {
+    color: #4FAEFF;
+    text-decoration: underline;
+}
+
 
 /*==================================================
  Bounce Boss Website v9.0
