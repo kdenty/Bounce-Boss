@@ -2138,6 +2138,64 @@ iframe[src*="://google.com"] {
     text-decoration: underline;
 }
 
+/* =========================================
+   CONTACT PAGE - SOCIAL ICONS FIX
+========================================= */
+
+body:has(.section .social-footer) .section .social-footer {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+}
+
+body:has(.section .social-footer) .section .social-footer a {
+    flex: 0 1 130px !important;
+    width: 130px !important;
+    min-width: 0 !important;
+    max-width: 130px !important;
+    padding: 14px 4px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+}
+
+body:has(.section .social-footer) .section .social-footer a span {
+    display: block !important;
+    width: 100% !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    font-size: 0.85rem !important;
+}
+
+body:has(.section .social-footer) .section .social-footer .social-icon {
+    display: block !important;
+    width: 52px !important;
+    height: 52px !important;
+    flex: 0 0 52px !important;
+    object-fit: contain !important;
+}
+
+
+/* =========================================
+   CONTACT PAGE - FOOTER MESSENGER LINK
+========================================= */
+
+body:has(.section .social-footer) .footer a[href*="m.me"] {
+    color: var(--green) !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere;
+}
+
+body:has(.section .social-footer) .footer a[href*="m.me"]:hover {
+    color: var(--blue) !important;
+}
+
 
 /*==================================================
  Bounce Boss Website v9.0
