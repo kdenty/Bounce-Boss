@@ -2196,6 +2196,154 @@ body:has(.section .social-footer) .footer a[href*="m.me"]:hover {
     color: var(--blue) !important;
 }
 
+/* =========================================
+   BOUNCE BOSS — DESKTOP POSITIONING FIXES
+   Desktop only — preserves existing styling
+========================================= */
+
+@media (min-width: 901px) {
+
+    /* MAIN HERO LOGO */
+    .main-hero-logo {
+        width: min(78%, 780px);
+        margin: 25px auto 30px;
+    }
+
+    /* AUTISM SOCIETY ALBERTA */
+    .autism-partner-section {
+        max-width: 850px;
+        margin: 30px auto 45px;
+        padding: 40px 30px;
+    }
+
+    .autism-partner-content {
+        max-width: 790px;
+    }
+
+    .autism-partner-logo {
+        max-width: 480px;
+        margin: 0 auto 20px;
+    }
+
+    .autism-partner-message {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* TRUST BADGES */
+    .trust-badges {
+        gap: 28px;
+        margin: 25px auto 20px;
+    }
+
+    /* MAIN CONTENT SECTIONS */
+    .section {
+        margin: 75px auto;
+    }
+
+    .section > h2 {
+        margin-bottom: 24px;
+    }
+
+    .section > .hero-description {
+        max-width: 850px;
+        margin: 0 auto 30px;
+    }
+
+    /* WHY CHOOSE BOUNCE BOSS */
+    .section .inventory-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px;
+        align-items: start;
+        margin-top: 35px;
+    }
+
+    .section .inventory-card {
+        min-width: 0;
+    }
+
+    .section .inventory-info {
+        width: 100%;
+    }
+
+    /* PERFECT FOR EVERY PARTY */
+    .section > .badges {
+        max-width: 1050px;
+        margin: 30px auto;
+        gap: 18px 28px;
+    }
+
+    /* SERVICE AREA */
+    .service-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 1000px;
+        margin: 35px auto 0;
+        gap: 25px 35px;
+    }
+
+    /* DESSERT PARTNER SECTION */
+    .partner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        align-items: center;
+        justify-content: initial;
+        gap: 60px;
+        flex-wrap: initial;
+    }
+
+    .partner > div:first-child {
+        min-width: 0;
+    }
+
+    .partner > div:first-child h2 {
+        margin-bottom: 24px;
+    }
+
+    .partner > div:first-child p {
+        max-width: 600px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .partner > div:first-child .btn {
+        margin: 20px 0 0;
+    }
+
+    .cupcake-carousel {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* GOOGLE REVIEWS */
+    .section.text-center {
+        text-align: center;
+    }
+
+    .section.text-center > .btn {
+        margin: 15px auto 0;
+    }
+
+    /* FINAL CALL TO ACTION */
+    .cta {
+        margin: 85px auto;
+    }
+
+    .cta > p {
+        margin-bottom: 25px;
+    }
+
+    /* FOOTER SOCIAL LINKS */
+    .footer .social-footer {
+        padding-bottom: 80px;
+        gap: 20px;
+    }
+
+    .footer .social-footer a {
+        min-width: 150px;
+    }
+
+}
 
 /*==================================================
  Bounce Boss Website v9.0
