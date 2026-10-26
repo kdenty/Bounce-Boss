@@ -717,30 +717,18 @@ HERO IMAGE — VISIBILITY AND RESPONSIVE FIX
 ========================================= */
 
 .hero-banner {
-display: block;
-width: 100%;
-height: clamp(320px, 45vw, 650px);
-object-fit: cover;
-object-position: center center;
-margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center center;
+    margin: 0 auto;
 
-filter:
-    brightness(1)
-    contrast(1.05)
-    saturate(1.1);
+    filter: brightness(1) contrast(1.05) saturate(1.1);
 
-mask-image: linear-gradient(
-    to bottom,
-    black 95%,
-    transparent 100%
-);
-
--webkit-mask-image: linear-gradient(
-    to bottom,
-    black 95%,
-    transparent 100%
-);
-
+    -webkit-mask-image: none;
+    mask-image: none;
 }
 
 /*==================================================
