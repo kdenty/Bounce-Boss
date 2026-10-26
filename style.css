@@ -711,52 +711,34 @@ box-shadow:
 0 0 30px rgba(141,77,255,.45);
 
 }
-/*==================================================
- HERO IMAGE
-==================================================*/
+/* =========================================
+   HERO IMAGE — RESPONSIVE SIZING FIX
+========================================= */
 
-.hero-banner{
+.hero-banner {
+    display: block;
+    width: 100%;
+    height: clamp(350px, 50vw, 600px);
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
 
-width:100%;
+    filter:
+        brightness(.88)
+        contrast(1.08)
+        saturate(1.15);
 
-height:60vh;
+    mask-image: linear-gradient(
+        to bottom,
+        black 85%,
+        transparent 100%
+    );
 
-min-height:340px;
-
-object-fit:cover;
-
-filter:
-
-brightness(.88)
-
-contrast(1.08)
-
-saturate(1.15);
-
-mask-image:
-
-linear-gradient(
-
-to bottom,
-
-black 72%,
-
-transparent 100%
-
-);
-
--webkit-mask-image:
-
-linear-gradient(
-
-to bottom,
-
-black 72%,
-
-transparent 100%
-
-);
-
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 85%,
+        transparent 100%
+    );
 }
 /*==================================================
  MAIN PAGE HERO LOGO
