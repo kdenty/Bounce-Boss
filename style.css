@@ -782,26 +782,16 @@ box-shadow:
  HERO CONTENT
 ==================================================*/
 
-.container{
-
-width:min(92%,1100px);
-
-margin:-120px auto 70px;
-
-padding:0 20px;
-
-text-align:center;
-
-position:relative;
-
-z-index:2;
-
-background:none;
-
-box-shadow:none;
-
-border:none;
-
+.container {
+    width: min(92%, 1100px);
+    margin: 0 auto 70px;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background: none;
+    box-shadow: none;
+    border: none;
 }
 
 .container h1{
