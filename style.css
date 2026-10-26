@@ -2344,6 +2344,33 @@ body:has(.section .social-footer) .footer a[href*="m.me"]:hover {
     }
 
 }
+/* =========================================
+   DESKTOP NAVIGATION — FIT SCREEN WIDTH
+========================================= */
+
+@media (min-width: 901px) {
+
+    .nav {
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 10px;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .nav a {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 11px 8px;
+        text-align: center;
+        font-size: clamp(0.8rem, 1vw, 0.95rem);
+    }
+
+    .nav::after {
+        display: none;
+    }
+
+}
 
 /*==================================================
  Bounce Boss Website v9.0
