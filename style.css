@@ -2482,7 +2482,129 @@ body:has(.section .social-footer) .footer a[href*="m.me"]:hover {
     }
 
 }
-/*==================================================
+/* =========================================
+   BOUNCE BOSS — NAVIGATION WIDTH FIX
+========================================= */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 6px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+.nav a {
+    flex: 0 1 auto;
+    min-width: 0;
+    padding: 10px clamp(5px, 1vw, 14px);
+    font-size: clamp(10px, 1vw, 14px);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.nav::after {
+    display: none;
+}
+
+/* Narrow screens: allow scrolling instead of squashing links */
+@media (max-width: 600px) {
+    .nav {
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    .nav a {
+        flex: 0 0 auto;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}
+
+/*/* =========================================
+   BOUNCE BOSS — HERO ALIGNMENT FIX
+========================================= */
+
+/* Center the main logo */
+.main-hero-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Autism Society partnership card */
+.autism-partner-section {
+    width: calc(100% - 32px);
+    max-width: 850px;
+    margin: 30px auto 40px;
+    padding: 40px 24px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.autism-partner-content {
+    width: 100%;
+    max-width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.autism-partner-logo {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.autism-partner-message,
+.autism-direct-donation-text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Center the insurance and AEDARSA logos */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+    margin: 25px auto 20px;
+}
+
+/* Center the safety statement */
+.safety-sub-badge {
+    width: calc(100% - 32px);
+    max-width: 900px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+/* Center the benefit badges */
+body > .badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    width: calc(100% - 32px);
+    margin: 30px auto;
+    text-align: center;
+}
  Bounce Boss Website v9.0
 
  Galaxy Edition
