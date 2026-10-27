@@ -188,8 +188,21 @@ iframe[src*="://google.com"]{filter:invert(90%) hue-rotate(180deg) brightness(95
   .footer .social-footer{justify-content:center;align-items:center;gap:20px;padding-bottom:80px}
   .footer .social-footer a{min-width:150px}
   body>.badges{justify-content:center;margin-left:auto;margin-right:auto;text-align:center}
-  body>a.btn{position:relative;left:50%;transform:translateX(-50%)}
-  body>a.btn:hover{transform:translateX(-50%) translateY(-4px) scale(1.03)}
+/* Desktop: center standalone buttons without horizontal transforms */
+@media (min-width: 901px) {
+    body > a.btn {
+        display: flex;
+        width: fit-content;
+        max-width: 100%;
+        margin: 15px auto;
+        position: relative;
+        left: auto;
+        transform: none;
+    }
+
+    body > a.btn:hover {
+        transform: translateY(-4px) scale(1.03);
+    }
 }
 
 /* Tablet and mobile */
