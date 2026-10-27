@@ -363,3 +363,59 @@ iframe[src*="://google.com"]{filter:invert(90%) hue-rotate(180deg) brightness(95
         max-width: 220px;
     }
 }
+/* ==================================
+   HOMEPAGE BUTTON ALIGNMENT FIX
+   Desktop, tablet, and mobile
+=================================== */
+
+/* Center the two main homepage buttons */
+#main-content > a.btn,
+#main-content > .section > a.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: calc(100% - 24px);
+    min-width: 0;
+    margin: 15px auto;
+    padding: 17px 34px;
+    position: relative;
+    left: auto;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
+    transform: none;
+}
+
+/* Keep buttons centered on desktop */
+@media (min-width: 901px) {
+    #main-content > a.btn,
+    #main-content > .section > a.btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Keep buttons properly sized on mobile */
+@media (max-width: 900px) {
+    #main-content > a.btn,
+    #main-content > .section > a.btn {
+        width: fit-content;
+        max-width: calc(100% - 24px);
+        margin: 15px auto;
+    }
+}
+
+/* Preserve the Galaxy hover glow and movement */
+#main-content > a.btn:hover,
+#main-content > .section > a.btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0 45px rgba(184, 255, 56, .55);
+}
+
+/* Preserve keyboard accessibility */
+#main-content > a.btn:focus-visible,
+#main-content > .section > a.btn:focus-visible {
+    outline: 3px solid var(--green);
+    outline-offset: 4px;
+}
