@@ -1,9 +1,13 @@
 /*==================================================
- Bounce Boss Website v6.4
+ Bounce Boss Website v6.5
  Performance Edition
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
     /*==============================================
       CENTER ACTIVE NAVIGATION
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             active.scrollIntoView({
 
-                behavior: "smooth",
+                behavior: prefersReducedMotion ? "auto" : "auto",
                 inline: "center",
                 block: "nearest"
 
@@ -36,56 +40,70 @@ document.addEventListener("DOMContentLoaded", () => {
         ".container, .section, .cta"
     );
 
-    const observer = new IntersectionObserver((entries) => {
+    if ("IntersectionObserver" in window && !prefersReducedMotion) {
 
-        entries.forEach((entry) => {
+        const observer = new IntersectionObserver((entries, observer) => {
 
-            if (entry.isIntersecting) {
+            entries.forEach((entry) => {
 
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
+                if (entry.isIntersecting) {
 
-            }
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px"
+        });
+
+        revealItems.forEach((item) => {
+
+            item.classList.add("reveal");
+            observer.observe(item);
 
         });
 
-    }, {
+    } else {
 
-        threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
+        revealItems.forEach((item) => {
 
-    });
+            item.classList.add("visible");
 
-    revealItems.forEach((item) => {
+        });
 
-        item.classList.add("reveal");
-        observer.observe(item);
-
-    });
+    }
 
     /*==============================================
       BUTTON PRESS EFFECT
     ==============================================*/
 
-    document.querySelectorAll(".btn, .book-now").forEach((button) => {
+    if (!prefersReducedMotion) {
 
-        button.addEventListener("pointerdown", () => {
+        document.querySelectorAll(".btn, .book-now").forEach((button) => {
 
-            button.style.transform = "scale(.97)";
+            button.addEventListener("pointerdown", () => {
+
+                button.style.transform = "scale(.97)";
+
+            });
+
+            const resetButton = () => {
+
+                button.style.transform = "";
+
+            };
+
+            button.addEventListener("pointerup", resetButton);
+            button.addEventListener("pointerleave", resetButton);
+            button.addEventListener("pointercancel", resetButton);
 
         });
 
-        const resetButton = () => {
-
-            button.style.transform = "";
-
-        };
-
-        button.addEventListener("pointerup", resetButton);
-        button.addEventListener("pointerleave", resetButton);
-        button.addEventListener("pointercancel", resetButton);
-
-    });
+    }
 
     /*==============================================
       BACK TO TOP BUTTON
@@ -95,27 +113,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (backTop) {
 
-        backTop.style.opacity = "0";
-        backTop.style.pointerEvents = "none";
-        backTop.style.transform = "translateY(15px)";
-
         let ticking = false;
 
         const updateScroll = () => {
 
-            if (window.scrollY > 300) {
+            const showButton = window.scrollY > 300;
 
-                backTop.style.opacity = "1";
-                backTop.style.pointerEvents = "auto";
-                backTop.style.transform = "translateY(0)";
-
-            } else {
-
-                backTop.style.opacity = "0";
-                backTop.style.pointerEvents = "none";
-                backTop.style.transform = "translateY(15px)";
-
-            }
+            backTop.style.opacity = showButton ? "1" : "0";
+            backTop.style.pointerEvents = showButton ? "auto" : "none";
+            backTop.style.transform = showButton
+                ? "translateY(0)"
+                : "translateY(15px)";
 
             ticking = false;
 
@@ -132,40 +140,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
+        }, { passive: true });
+
+    }
+
+    /*==============================================
+      CUPCAKE CAROUSEL
+      Automatic 4 Second + Tap To Advance
+    ==============================================*/
+
+    document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
+
+        const slides = carousel.querySelectorAll(".cupcake-slide");
+
+        if (slides.length <= 1) return;
+
+        let currentSlide = 0;
+        let carouselTimer = null;
+
+        function showNextSlide() {
+
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+
+        }
+
+        function startCarousel() {
+
+            if (prefersReducedMotion || carouselTimer !== null) return;
+
+            carouselTimer = window.setInterval(showNextSlide, 4000);
+
+        }
+
+        function stopCarousel() {
+
+            if (carouselTimer !== null) {
+
+                window.clearInterval(carouselTimer);
+                carouselTimer = null;
+
+            }
+
+        }
+
+        /* Tap/click advances to next image */
+        carousel.addEventListener("click", () => {
+
+            showNextSlide();
+
+            /* Restart the four-second timer after interaction */
+            stopCarousel();
+            startCarousel();
+
         });
 
-    }
+        /* Pause automatic changes while the carousel is off-screen */
+        if ("IntersectionObserver" in window) {
 
-});
+            const carouselObserver = new IntersectionObserver((entries) => {
 
+                entries.forEach((entry) => {
 
-    /*==================================================
- CUPCAKE CAROUSEL
- Automatic 4 Second + Tap To Advance
-==================================================*/
+                    if (entry.isIntersecting) {
 
-document.querySelectorAll(".cupcake-carousel").forEach((carousel) => {
+                        startCarousel();
 
-    const slides = carousel.querySelectorAll(".cupcake-slide");
+                    } else {
 
-    if (slides.length <= 1) return;
+                        stopCarousel();
 
-    let currentSlide = 0;
+                    }
 
-    function showNextSlide() {
+                });
 
-        slides[currentSlide].classList.remove("active");
+            });
 
-        currentSlide = (currentSlide + 1) % slides.length;
+            carouselObserver.observe(carousel);
 
-        slides[currentSlide].classList.add("active");
+        } else {
 
-    }
+            startCarousel();
 
-    /* Automatic change every 4 seconds */
-    setInterval(showNextSlide, 4000);
+        }
 
-    /* Tap/click advances to next image */
-    carousel.addEventListener("click", showNextSlide);
+    });
 
 });
