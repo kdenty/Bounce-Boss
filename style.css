@@ -210,10 +210,10 @@ iframe[src*="://google.com"]{filter:invert(90%) hue-rotate(180deg) brightness(95
 }
 /* DESKTOP HERO IMAGE SIZE FIX */
 @media (min-width: 901px) {
-.main-hero-logo {
-width: 480px !important;
-max-width: 55% !important;
-height: auto !important;
-margin: 20px auto 25px !important;
-}
+    .main-hero-logo {
+        width: 300px !important;
+        max-width: 55% !important;
+        height: auto !important;
+        margin: 8px auto 10px !important;
+    }
 }
