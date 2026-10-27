@@ -41,7 +41,15 @@ h1,h2,h3{font-weight:800;background:linear-gradient(120deg,#C98DFF 0%,#7C6CFF 20
 .nav .active{background:linear-gradient(135deg,rgba(141,77,255,.95),rgba(79,174,255,.95));box-shadow:0 0 30px rgba(141,77,255,.45)}
 
 /* Hero images */
-.hero-banner{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;margin:0 auto;filter:brightness(1) contrast(1.05) saturate(1.1);-webkit-mask-image:none;mask-image:none}
+.hero-banner {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 10px auto 20px;
+    object-fit: contain;
+    object-position: center;
+}
 .main-hero-logo{display:block;width:min(70%,650px);height:auto;margin:20px auto 25px;background:transparent;filter:drop-shadow(0 0 18px rgba(141,77,255,.35))}
 
 /* Hero content */
