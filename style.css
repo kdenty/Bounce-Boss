@@ -50,7 +50,7 @@ h1,h2,h3{font-weight:800;background:linear-gradient(120deg,#C98DFF 0%,#7C6CFF 20
     object-fit: contain;
     object-position: center;
 }
-.main-hero-logo{display:block;width:min(70%,650px);height:auto;margin:20px auto 25px;background:transparent;filter:drop-shadow(0 0 18px rgba(141,77,255,.35))}
+.main-hero-logo{display:block;width:min(70%,650px);height:auto;margin:20px auto 25px;background:transparent;filter:none}
 
 /* Hero content */
 .container{width:min(92%,1100px);margin:0 auto 70px;padding:0 20px;text-align:center;position:relative;z-index:2;background:none;box-shadow:none;border:none}
