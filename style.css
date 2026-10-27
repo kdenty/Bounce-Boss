@@ -198,6 +198,11 @@ iframe[src*="://google.com"]{filter:invert(90%) hue-rotate(180deg) brightness(95
   .container{margin:-70px auto 40px}
   .inventory-grid,.steps,.service-grid{grid-template-columns:1fr;gap:40px}
   .partner{flex-direction:column;text-align:center}
+   .partner > div:last-child {
+  width: 100%;
+  max-width: 360px;
+  flex: 0 0 auto;
+   }
   .partner img{max-width:100%}
   .btn{display:flex;width:100%;max-width:340px;margin:12px auto}
   .book-now{right:14px;bottom:14px}
