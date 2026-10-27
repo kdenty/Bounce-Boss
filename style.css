@@ -1,4 +1,4 @@
-/* Bounce Boss Website v9.2 — Galaxy Edition
+1/* Bounce Boss Website v9.2 — Galaxy Edition
    Consolidated stylesheet. Keeps existing class names and page styling.
    Lighthouse fix: removes non-composited auroraText animation.
 */
@@ -41,7 +41,7 @@ h1,h2,h3{font-weight:800;background:linear-gradient(120deg,#C98DFF 0%,#7C6CFF 20
 
 /* Hero images — desktop hero intentionally reduced */
 .hero-banner{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;margin:0 auto;filter:brightness(1) contrast(1.05) saturate(1.1);-webkit-mask-image:none;mask-image:none}
-.main-hero-logo{display:block;width:min(70%,650px);height:auto;margin:20px auto 25px;background:transparent;filter:drop-shadow(0 0 18px rgba(141,77,255,.25))}
+.main-hero-logo{display:block;width:min(70%,650px);height:auto;margin:20px auto 25px;background:transparent;filter:none}
 
 /* Hero content */
 .container{width:min(92%,1100px);margin:0 auto 70px;padding:0 20px;text-align:center;position:relative;z-index:2;background:none;box-shadow:none;border:none}
