@@ -1,4 +1,4 @@
-/* Bounce Boss Website v9.0 — Galaxy Edition
+/* Bounce Boss Website v9.1 — Galaxy Edition
    Consolidated stylesheet. Keeps existing class names and page styling. */
 
 :root{--purple:#8D4DFF;--blue:#4FAEFF;--green:#B8FF38;--white:#F8FAFF;--text:#E9EEF8;--speed:.3s ease}
@@ -151,7 +151,12 @@ iframe[src*="://google.com"]{filter:invert(90%) hue-rotate(180deg) brightness(95
   .autism-partner-content{max-width:790px}
   .autism-partner-logo{max-width:480px;margin:0 auto 20px}
   .autism-partner-message{max-width:700px;margin:0 auto}
-  .trust-badges{gap:28px;margin:25px auto 20px}
+  .trust-badges{gap:30px;margin:25px auto 20px}
+  .trust-badges img{width:175px;max-width:48%;height:85px}
+
+  /* Secondary pages: limit standalone hero banners on desktop.
+     The homepage logo uses .main-hero-logo and is not targeted here. */
+  body>img.hero-banner{display:block;width:100%;max-width:800px;height:auto;margin:10px auto 20px}
   .section{margin:75px auto}
   .section>h2{margin-bottom:24px}
   .section>.hero-description{max-width:850px;margin:0 auto 30px}
